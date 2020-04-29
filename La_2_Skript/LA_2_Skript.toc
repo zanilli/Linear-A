@@ -1,0 +1,4 @@
+\babel@toc {german}{}
+\contentsline {section}{\numberline {7}Euklidische und Unit\IeC {\"a}re Vektorr\IeC {\"a}ume}{2}% 
+\contentsline {subsection}{\numberline {7.7}Spezielle Endomorphismen}{2}% 
+\contentsline {subsection}{\numberline {7.8}Der Spektralsatz f\IeC {\"u}r normale Endomorphismen}{5}% 

@@ -1,0 +1,471 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{fourier}
+\usepackage{enumitem}
+\usepackage{titling}
+
+
+
+\newtheorem{theorem}{Satz}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Korollar}
+\newtheorem{claim}{Behauptung}
+\newtheorem*{claim*}{Behauptung}
+\newtheorem*{attention}{Achtung!}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{exercise}[theorem]{Übung}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Bemerkung}
+
+\newlist{proofenum}{enumerate}{1}
+\setlist[proofenum]{label=(\roman*)}
+
+\renewcommand{\bar}[1]{\overline{#1}}
+\renewcommand{\hat}[1]{\widehat{#1}}
+
+\setcounter{section}{6}
+
+
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Felix Zillinger}
+\title{Lineare Algebra 2 Skript}
+\date{2. Semester}
+\begin{document}
+	\numberwithin{equation}{subsection}
+	\numberwithin{theorem}{subsection}
+	\maketitle 
+	\tableofcontents
+
+	\newpage	
+	
+	\section*{Einleitung}
+	Dieses Skript ist eine Weiterführung des Skripts von Lineare Algebra I. Das erste Kapitel ist eine Weiterführung des Kapitels über euklidische und unitäre Vektorräume.
+	\section{Euklidische und Unitäre Vektorräume}
+	\setcounter{subsection}{6}
+	\subsection{Spezielle Endomorphismen}
+	
+	Dieser Abschnitt hat einen vorbereitenden Character. Wir untersuchen hier eine Reihe von Klassen von Endomorphismen mit zusätzlichen Eigenschaften. \\
+	Ein Ziel wird es sein, den Spektralsatz für selbstadjungierte Endomorphismen auf seine essentiellen Vorraussetzungen zu untersuchen und zu verallgemeinern. \\
+	Im gesamten Abschnitt seien $V, W$ euklidische oder unitäre Vektorräume über $\mathbb{K}(= \mathbb{R}; \mathbb{C})$. \\
+	
+	\begin{definition}
+		Sei $T \in \mathcal{L}(V) := End_{\mathbb{K}}(V)$. $T$ heißt \\
+		\begin{itemize}
+			\item \textbf{normal}, falls $T^{*} \cdot T = T \cdot T^*$
+			\item \textbf{unitär}, falls $T^{*} \cdot T = T \cdot T^* = Id_V$
+			\item \textbf{selbstadjungiert}, falls $T^* = T$
+			\item \textbf{(Orthogonal)Projektion},  falls $T = T^* = T^2$
+		\end{itemize}
+	\end{definition}
+	
+	\begin{remark}
+		\begin{itemize}
+			\item In Punkt 1 und 2 ist die Existenz von $T^*$ Teil der Vorraussetzung.
+			\item In Punkt 2-4 sind die Endomorphismen bereits normal.
+			\item Ist $dim(V)<\infty$, so folgt aus $T^* \cdot T = Id_V$ (bzw. $T \cdot T^* = Id_V$) bereits, dass $T$ unitär ist. 
+		\end{itemize}
+	\end{remark}
+	\begin{lemma}
+		$T$ normal $\Leftrightarrow$ $T^*$ existiert und $\forall_{x \in V} \  ||Tx|| = ||T^*x || $. \\
+	\end{lemma}
+	\begin{remark}
+		Es folgt dann schon $\forall_{x,y \in V} \ \langle Tx, Ty \rangle = \langle T^*x,T^*y \rangle$
+	\end{remark}
+	
+	\begin{proof}
+		$\Rightarrow$: Ist $T$ normal, so folgt für $x \in V$:
+		\begin{equation}
+			\begin{split}
+				||Tx ||^2 &= \langle Tx,Tx \rangle = \langle T^*Tx,x \rangle \\
+				&= \langle TT^*x,x\rangle = \langle T^*x,T^*x \rangle \\
+				&= ||T^*x ||^2
+			\end{split}
+		\end{equation}
+		$\Leftarrow$: Umgekehrt gelte Gleichung (7.1.1) für $x \in V$. Dann liefert die Polarisierungsidentität (Satz 1.6 in LA I) (exemplarisch für $\mathbb{K} = \mathbb{C}$):
+		\begin{equation}
+			\begin{split}
+				\langle Tx, Ty \rangle &= \frac{1}{4} \sum\limits_{k=0}^3 i^k \langle T(y+i^kx), T(y+i^kx) \rangle \\
+				& = \frac{1}{4} \sum\limits_{k=0}^3 i^k \langle T^*(y+i^kx),T^*(y+i^kx) \rangle \\
+				&= \langle T^*x,T^*y \rangle
+			\end{split}
+		\end{equation}
+		und somit
+		\begin{equation}
+			\langle T^*Tx,y \rangle = \langle Tx,Ty \rangle = \langle T^*x, T^*y \rangle = \langle TT^*x,y \rangle
+		\end{equation}
+		Aus der positiven Definitheit des Skalarprodukts folgt das Lemma.
+	\end{proof} 
+	
+	Wegen ihrer Wichtigkeit stellen wir die folgende Aussage nochmal heraus:
+	
+	\begin{lemma}
+		Für $x,y \in V$ gilt:
+		\begin{equation}
+			x = y \Leftrightarrow \forall_{z \in V} \langle x,z \rangle = \langle y,z \rangle
+		\end{equation}
+	\end{lemma}
+	
+	\begin{proof}
+		$\Rightarrow$: klar. \\
+		$\Leftarrow$: Es folgt 
+		\begin{equation}
+			\forall_{z \in V} \langle x-y,z \rangle = 0
+		\end{equation}
+		Insbesondere mit $z = x-y$ auch $||x-y ||^2 = 0$, also $x=y$.
+	\end{proof}
+	
+	\begin{exercise}
+		Sei $T \in \mathcal{L}(V)$. Falls $T = T^*$ und $\forall_{x \in V} \langle Tx,x \rangle = 0$, so ist $T=0$.  \\
+		Im Fall $\mathbb{K} = \mathbb{C}$ kann auf die Vorraussetzung $T = T^*$ verzichtet werden, im Falle $\mathbb{K}= \mathbb{R}$ jedoch nicht.
+	\end{exercise}
+	
+	\begin{theorem}
+		Sei $T \in \mathcal{L}(V)$ normal. Dann gilt: \\
+		\begin{proofenum}
+			\item $kerT = kerT^*$
+			\item Mit $T$ ist auch $T-\lambda \cdot Id_V$ normal für $\lambda \in \mathbb{K}$. Es gilt $ker(T-\lambda \cdot Id_V) = ker(T^* - \lambda \cdot Id)$. \\ Insbesondere haben $T$ und $T^*$ dieselben Eigenwerte mit gleichen Vielfachheiten.
+			\item Sind $\lambda \neq \mu$ verschiedene Eigenwerte von $T$, so stehen die entsprechenden Eigenräume senkrecht: $ker(T-\lambda \cdot Id_V) \perp ker(T-\mu \cdot Id_V)$.
+		\end{proofenum}
+	\end{theorem}
+	
+	\begin{proof} 
+		\begin{proofenum}
+			\item 1 folgt unmittelbar aus Lemma 7.1.2 :\\
+				$x \in kerT \Rightarrow Tx = 0 \Rightarrow 0 = ||Tx || = ||T^*x||$, also $x \in kerT^*$
+			\item 
+				\begin{equation}
+					\begin{split}
+						(T-\lambda)^*(T - \lambda) &= T^*T- \bar{\lambda}Id_V-\lambda Id_V + |\lambda|^2Id_V \\
+						&= TT^*- \bar{\lambda}Id_V-\lambda Id_V + |\lambda|^2Id_V \\
+						&= (T-\lambda)(T^*-\lambda)
+					\end{split}
+				\end{equation}
+				Die restlichen Behauptungen folgen nun aus (i).
+			\item Sei $Tx = \lambda x$, $Ty = \mu y$. Mit (ii) folgt: 
+				\begin{equation}
+					\begin{split}
+						\lambda \langle x,y \rangle &= \langle \bar{\lambda}x,y \rangle = \langle T^*x,y \rangle \\
+						&= \langle x, Ty \rangle = \langle x, \mu y \rangle \\
+						&= \langle x,y \rangle \cdot \mu
+					\end{split}
+				\end{equation}
+				also 
+				\begin{equation}
+					(\lambda - \mu) \langle x,y \rangle = 0 
+					\Rightarrow \langle x,y \rangle = o
+				\end{equation}
+		\end{proofenum}
+	\end{proof}
+	
+	\begin{theorem}
+		Für $U \in \mathcal{L}(V)$ sind äquivalent : \\
+		\begin{proofenum}
+			\item $U$ ist unitär. \\		
+			\item $\forall_{x,y \in V} \langle Ux, Uy \rangle = \langle x,y \rangle$ \\
+			\item $\forall_{x \in V} || Ux|| = ||x||$
+			\item Ist $\{ e_1,...,e_n \}$ ein Orthogonalsystem, so ist auch $\{ Ue_1,...,Ue_n \}$ ein Orthogonalsystem.
+		\end{proofenum}
+		\begin{remark}
+			Ist $U$ unitär, so ist $U$ invertierbar mit $U^{-1} = U^*$.
+		\end{remark}
+	\end{theorem}
+	
+	\begin{proof}
+		(i) $\Rightarrow$ (ii): \\
+		\begin{equation}
+			\langle Ux, Uy \rangle = \langle U^*Ux,y \rangle = \langle x,y \rangle
+		\end{equation}
+		(ii) $\Rightarrow$ (iv): \\
+		\begin{equation}
+			\langle Ue_i,Ue_j \rangle \overset{(ii)}{=} \langle e_i,e_j \rangle = \delta_{ij}
+		\end{equation}		
+		(iv) $\Rightarrow$ (iii): \\
+		Klar.\\
+		(iii) $\Rightarrow$ (ii): \\
+		Folgt mit der Polarisierungsformal wie in Beweis von Lemma 7.1.2:
+		\begin{equation}
+			\begin{split}
+				\langle Ux, Uy \rangle &\overset{(\mathbb{K} = \mathbb{C})}{=} \frac{1}{4} \sum\limits_{k=0}^3 i^k \langle U(x+i^ky), U(x+i^ky) \rangle \\
+				&= \frac{1}{4} \sum\limits_{k=0}^3 i^k \langle x + i^ky,x+i^ky \rangle \\
+				&= \langle x,y \rangle
+			\end{split}
+		\end{equation}
+		(ii) $\Rightarrow$ (i): \\
+		\begin{equation}
+			\langle U^* Ux,y \rangle = \langle Ux, Uy \rangle = \langle x,y \rangle
+		\end{equation}
+		$\Rightarrow U^* U = Id_V$ (nach Lemma 7.1.3), $UU^*$ analog
+	\end{proof}
+	
+	\begin{corollary}
+		Die Menge der unitären Endomorphismen eines Vektorraums mit Skalarprodukt bilden bzgl. der Komposition eine Gruppe.
+	\end{corollary}
+	
+	\begin{proof}
+		Man muss nur noch bemerken, dass für adjungierbare $T_1, T_2 \in \mathcal{L}(V)$ gilt: \\
+		$T_1 \circ T_2$ ist adjungierbar und $(T_1 \circ T_2)^* = T_2^* \circ T_1^*$. \\
+		Sind $T_1, T_2$ unitär, so folgt :
+		\begin{equation}
+			(T_1 \cdot T_2)^* T_1 T_2 = T_2^*(T_1^*T_1)T_2 = T_2^*T_2=Id_V
+		\end{equation}
+	\end{proof}	
+	
+	Unitarität lässt sich in Koordinaten sehr leicht testen:
+	
+	\begin{theorem}
+		Sei $V$ ein endlich-dimensionaler Vektorraum mit Skalarprodukt. \\
+		Dann ist $T \in \mathcal{L}(V)$ genau dann normal (unitär), wenn bzgl. einer Orthonormalbasis $B=\{e_1,...,e_n  \}$ die Matrix $M_B(T)$ diese Eigenschaft hat.
+	\end{theorem}
+	
+	\begin{proof}
+		Der Satz folgt unmittelbar aus Satz 4.2. Für Orthonormalbasen gilt: \\
+		\begin{equation}
+			M_B(T)^* = M_B(T^*)
+		\end{equation}
+		Wobei $M_B(T)*$ die Matrixadjunktion bezeichnet.
+	\end{proof}		
+	
+	\newpage	
+	
+ 	\subsection{Der Spektralsatz für normale Endomorphismen}
+	\begin{remark}
+		Der komplexe Fall ist hier wesentlich einfacher als der reelle Fall.
+	\end{remark}
+	
+	\begin{theorem}{(Spektralsatz für normale Endomorphismen, $\mathbb{K} = \mathbb{C}$)}
+		Sei $V$ ein unitärer Vektorraum, $\mathbb{K} = \mathbb{C}$, $dim V = n < \infty$. Dann ist $T \in \mathcal{L}(V)$ genau dann normal, wenn es zu $T$ eine Orthonormalbasis von $V$ gibt, welche nur aus Eigenvektoren von $T$ besteht.
+	\end{theorem}
+	
+	\begin{proof}
+		(Analog zum beweis von Satz 5.3) \\
+		Wir beginnen mit der einfacher Implikation: \\
+		Sei $B = \{ e_1,...,e_n \}$ eine Orthonormalbasis von $V$ mit $Te_j = \lambda_j e_j$. Das heißt: \\
+		\begin{equation}
+			M_B(T) = 
+			\begin{pmatrix}
+				\lambda_1 & \dots & 0 \\
+				\vdots & \ddots & \vdots \\
+				0 & \dots & \lambda_n
+			\end{pmatrix}
+		\end{equation}
+		Nach Satz 4.2 ist 
+		\begin{equation}
+			M_B(T^*) = M_B(T)^* = 
+			\begin{pmatrix}
+				\bar{\lambda}_1 & \dots & 0 \\
+				\vdots & \ddots & \vdots \\
+				0 & \dots & \bar{\lambda}_n
+			\end{pmatrix}
+		\end{equation}
+		das heißt also $T^*e_j = \bar{\lambda}_j e_j$ und folglich
+		\begin{equation}
+			M_B(T^*T) = 
+			\begin{pmatrix}
+				|\lambda_1|^2 & \dots & 0 \\
+				\vdots & \ddots & \vdots \\
+				0 & \dots & |\lambda_n|^2
+			\end{pmatrix}
+			= M_B(TT^*)
+		\end{equation}
+		folglich ist $TT^* = T^* T$, d.h. $T$ ist normal. \\
+		Umgekehrt sei $T$ normal: \\
+		 Da $\mathbb{K} = \mathbb{C}$, existiert zu $T$ ein normierter Eigenvektor $e_1$ mit $||e_1 ||=1, Te_1 = \lambda_1 e_1$ und da $T$ normal ist, gilt $T^* e_1 = \bar{\lambda}_1 e_1 $. \\
+		 Wir führen nun eine Induktion nach $n = dimV$ und nehmen an, die Behauptung gelte für alle Dimensionen $<n$: \\
+		 $U = \langle e_1 \rangle^{\perp} \subset V$ ist ein unitärer Vektorraum der Dimension $n-1$. \\
+		 Wir zeigen:
+		 \begin{claim}
+		 	$T|_U \in End_{\mathbb{C}}(U)$ ist normal.
+		 \end{claim}
+		 Die Induktionsvorraussetzung liefert die Existenz einer Orthonormalbasis $\{ e_2,...,e_n \}$ von $U$ mit $Te_j = \lambda_j e_j$. $\{ e_1,e_2,...,e_n \}$ ist dann die gewünschte Basis. \\
+		 Es bleibt Behauptung 1 zu zeigen: \\
+		 Sei $x \in U$. Dann ist 
+		 \begin{equation}
+		 	\langle Tx,e_1 \rangle = \langle x, T^* e_1 \rangle = \bar{\lambda}_1 \langle x, e_1 \rangle = 0
+		 \end{equation}
+		 also $T(U) \subset U$. Analog sieht man $T^*(U) \subset U$. \\
+		 Dann folgt aber $(T|_U)^* = T^*|_U$ und daher
+		 \begin{equation}
+		 	(T|_U)^*T|_U = T^*T|_U = TT^*|_U= T|_U(T|_U)^*
+		 \end{equation}
+	\end{proof}
+	
+	\newpage	
+	
+	\textbf{Die Komplexifizierung eines rellen Vektorraumes} \\
+	Der reelle Fall bedarf einiger Vorbereitung. Zur Motivation betrachten wir den $V_{\mathbb{C}} = \mathbb{C}^n$ mit dem Skalarprodukt 
+	\begin{equation}
+		\langle z,w \rangle = \sum\limits_{j=1}^n \bar{z}_j w_j
+	\end{equation}
+	$V_{\mathbb{C}}$ ist gleichzeitig ein reeller Vektorraum, indem man die Zerlegung in Real- und Imaginärtiel komponentenweise vornimmt: \\
+	\begin{proofenum}
+		\item Jedes $z \in \mathbb{C}^n$ besitzt eine eindeutige Zerlegung $z = x+iy$ mit $x,y \in \mathbb{R}^n$. Offenbar ist $V = \mathbb{R}^n$ ein $\mathbb{R}$-Vektorraum.
+		\item Es gibt eine $\mathbb{C}$antilineare Involution \ $\bar{\cdot}: V_{\mathbb{C}} \rightarrow V_{\mathbb{C}}$ mit $V = \{ z \in V_{\mathbb{C}} | \bar{z} = z \}$ (klar: \ $\bar{\cdot}$ \ ist die komplexe Konjugation ).
+		\item Ist $T \in End_{\mathbb{R}}$, so besitzt $T$ eine eindeutige Fortsetzung $\hat{T} \in End_{\mathbb{C}}(V_{\mathbb{C}})$ (klar: dies ist die gleiche Matrix). \\
+		Es gilt, da $M_B(T)$ reell ist $\bar{T(z)} = T(\bar{z})$.
+		\item Es gibt genau ein hermitesches Skalarprodukt auf $V_{\mathbb{C}}$, welches das (Standard)skalarprodukt fortsetzt (klar: dies ist das Standardskalarprodukt auf $\mathbb{C}^n$, Eindeutigkeit: Übung)
+	\begin{attention}
+		Für $z = x + iy$, $\tilde{z} = \tilde{x} + i \tilde{y} \in \mathbb{C}^n$ ist
+		\begin{equation}
+			\begin{split}
+				\langle z, \tilde{z} \rangle &= \sum\limits_{j=1}^n \bar{z}_j \tilde{z}_j \\
+				&= \sum\limits_{j=1}^n (x_j \tilde{x}_j+y_j \tilde{y}_j)+i(-y_j \tilde{x}_j+x_j \tilde{y}_j) \\
+				&= (\langle x,\tilde{x} \rangle_{\mathbb{R}^n} + \langle y, \tilde{y} \rangle_{\mathbb{R}^n})+i(-\langle y,\tilde{x} \rangle_{\mathbb{R}^n} + \langle x,\tilde{y} \rangle_{\mathbb{R}^n})
+			\end{split}
+		\end{equation}
+	\end{attention}
+		\item Ist $T \in End_{\mathbb{R}}(\mathbb{R}^n)$ normal, so ist auch $\hat{T} \in End_{\mathbb{C}}(\mathbb{C}^n)$ normal.
+	\end{proofenum}
+	Die hier gemachten Bemerkungen sind nicht auf den $\mathbb{C}^n$ / $\mathbb{R}^n$ begrenzt. Allgemein gilt: \\
+	\begin{theorem}
+		Sei $V$ ein euklidischer Vektorraum (Vektorraum mit Skalarprodukt über $\mathbb{R}$). Darum existiert ein komplexer Vektorraum $V_{\mathbb{C}}$, so dass (i)-(v) gelten. (Details: Übung)
+	\end{theorem}
+	Nach dieser Vorbereitung können wir den Spektralsatz für normale Endomorphismen über $\mathbb{K} = \mathbb{R}$ formulieren. 
+	\newpage
+	\begin{theorem}{Spektralsatz für normale Endomorphismen,  $\mathbb{K} = \mathbb{R}$}
+		Sei $V$ ein euklidischer Vektorraum. Dann ist $T \in \mathcal{L}(V)$ genau dann normal, wenn es für $T$ eine Orthonormalbasis $B$ von $V$ gibt, bzgl. der $M_B(T)$ die Gestalt \\
+		\begin{equation}
+			M_B(T) =
+			\begin{pmatrix}
+				\lambda_1 & \dots & 0 &0 & \dots & 0 \\
+				\vdots &\ddots & \vdots & \vdots & \ddots& \vdots\\
+				0 & \dots & \lambda_r & 0 &\dots & 0 \\
+				0 & \dots & 0 & \mathcal{Q}_1 & \dots & 0 \\
+				\vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+				0 & \dots & 0 & 0 & \dots & \mathcal{Q}_r
+			\end{pmatrix}	
+		\end{equation}
+		Dabei sind $\lambda_1,...,\lambda_r \in \mathbb{R}$ die reellen Eigenwerte von $T$. Jedes $\mathcal{Q}_j \in M(2,\mathbb{R})$ ist von der Gestalt
+		\begin{equation}
+			\mathcal{Q}_j = 
+			\begin{pmatrix}
+				\alpha_j & \beta_j \\
+				- \beta_j & \alpha_j
+			\end{pmatrix}
+		\end{equation}
+		Dabei sind $\mu_j = \alpha_j + i\beta_j $ genau die komplexen Eigenwerte von $\hat{T}$ (=komplexe Nullstellen des charakteristischen Polynoms von $T$).
+	\end{theorem}
+	\begin{proof}
+		Wir orientieren uns am Beweis von Satz 7.8.1 mit entsprechenden Modifikationen. \\
+		Zunächst nehmen wir an, dass $M_B(T)$ obige Gestalt hat. Dann ist wiederum nach Satz 7.4.2
+		\begin{equation}
+			M_B(T^*) =
+			\begin{pmatrix}
+				\bar{\lambda}_1 & \dots & 0 &0 & \dots & 0 \\
+				\vdots &\ddots & \vdots & \vdots & \ddots& \vdots\\
+				0 & \dots & \bar{\lambda}_r & 0 &\dots & 0 \\
+				0 & \dots & 0 & \mathcal{Q}_1^* & \dots & 0 \\
+				\vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+				0 & \dots & 0 & 0 & \dots & \mathcal{Q}_r^*
+			\end{pmatrix}
+		\end{equation}
+		also gilt 
+		\begin{equation}
+			M_B(T^*T) =
+			\begin{pmatrix}
+				|\lambda_1|^2 & \dots & 0 &0 & \dots & 0 \\
+				\vdots &\ddots & \vdots & \vdots & \ddots& \vdots\\
+				0 & \dots & |\lambda_r|^2 & 0 &\dots & 0 \\
+				0 & \dots & 0 & \mathcal{Q}_1^* \mathcal{Q}_1 & \dots & 0 \\
+				\vdots & \ddots & \vdots & \vdots & \ddots & \vdots \\
+				0 & \dots & 0 & 0 & \dots & \mathcal{Q}_r^* \mathcal{Q}_r
+			\end{pmatrix}
+		\end{equation}
+		Wenn man sich eines der Kästchen anschaut sieht man
+		\begin{equation}
+			\begin{split}
+				\mathcal{Q}_j^* \mathcal{Q}_j &= \begin{pmatrix}
+					\alpha_j & -\beta_j \\
+					\beta_j & \alpha_j
+				\end{pmatrix} \cdot \begin{pmatrix}
+					\alpha_j & \beta_j \\
+					-\beta_j & \alpha_j
+				\end{pmatrix} = \begin{pmatrix}
+					\alpha_j^2 + \beta_j^2 & 0 \\
+					0 & \alpha_j^2 + \beta_j^2
+				\end{pmatrix} \\
+				&= \mathcal{Q}_j \mathcal{Q}_j^* 
+			\end{split}
+		\end{equation}
+		Folglich gilt 
+		\begin{equation}
+			M_B(T^*T) = M_B(TT^*)
+		\end{equation}
+		also ist $T$ normal. \\
+		Wir berechnen das charakteristische Polynom zunächst für $\mathcal{Q}_j$: \\
+		\begin{equation}
+			\begin{split}
+				det\begin{pmatrix}
+					X - \alpha_j & \beta_j \\
+					\beta_j & X- \alpha_j
+				\end{pmatrix} &= X^2-2\alpha_jX+\alpha_j^2+\beta_j^2 \\
+				&= X^2 - 2 Re(\mu_j)X+ |\mu_j|^2, \ \ \  \mu_j := \alpha_j + i \beta_j \\
+				&= (X- \mu_j) (X- \bar{\mu}_j)
+			\end{split}
+		\end{equation}
+		Das heißt das charakteristische Polynom von T ist gegeben durch
+		\begin{equation}
+			\chi_T(X) = \prod\limits_{j=1}^r (X-\lambda_j) \prod\limits_{j=1}^s (X-\mu_j)(X-\bar{\mu}_j)
+		\end{equation}
+		Dies beendet den Beweis der Richtung $\Leftarrow$. \\
+		Zum Beweis der Umkehrung wenden wir Induktion über $n = dim(V)$. Für $n=1$ ist jeder Endomorphismus normal und schon in Diagonalgestalt, es ist also nichts zu zeigen. \\
+		Die Behauptung sei bewiesen für Dimensionen $<n$ und sei nun $n=dimV$ und $T \in End_{\mathbb{R}}(V)$ normal gegeben. Dann gibt es die folgenden zwei Fälle: \\
+		\begin{itemize}
+			\item \textbf{1. Fall:} $T$ besitzt einen reellen Eigenwert.\\
+				Dann erfolgt der Beweis wie in Satz 7.8.1. Man nehme einen Eigenvektor $e_1$, $||e_1||=1, \ Te_1 = \lambda_1 e_1, \ \lambda_1 \in \mathbb{R}$ und wendet die Induktionsvoraussetzung auf den normalen Endomorphismus $T|_{\langle e_1 \rangle^{\perp}}$ an.
+			\item \textbf{2. Fall:} $T$ besitzt keinen reellen Eigenwert. \\
+			Nun betrachten wir $\hat{T} \in End_{\mathbb{C}}(V_{\mathbb{C}})$ (Satz 7.8.2).
+			$\hat{T}$ ist normal mit gleichem charakteristischem Polynom wie $T$ (Übung). Sei also $\mu = \alpha + i \beta, \ \beta \neq 0$ ein komplexer Eigenwert von $\hat{T}$ mit normiertem Eigenvektor $\xi \in V_{\mathbb{C}}$. Es ist nach Satz 7.8.2 
+			\begin{equation}
+				\hat{T}(\overline{\xi})=\overline{T(\xi)}= \overline{\mu \cdot \xi} = \overline{\mu} \cdot \overline{\xi}
+			\end{equation}
+			und da $\mu \neq \bar{\mu}$ und $\hat{T}$ normal ist, folgt aus Satz 7.7.4, dass $\xi \perp \bar{\xi}$, also mit 
+			\begin{equation}
+				\begin{split}
+					\xi &= \zeta + i \eta \\
+					\zeta :&= \frac{1}{\sqrt{2}}(\xi + \bar{\xi}) \\
+					\eta :&= \frac{1}{\sqrt{2}i}(\xi - \bar{\xi}) \in V \\
+					||\zeta||^2&= \frac{1}{2} (||\xi||^2+||\bar{\xi}||^2) =1 \\
+					||\eta ||^2 &= 1 \ analog \\
+					\langle \zeta, \eta \rangle &= \frac{1}{2i}\langle \xi + \bar{\xi}, \xi - \bar{\xi} \rangle \\
+					&= \frac{1}{2i}(||\xi||^2-||\bar{\xi}||^2) \\
+					&=0
+				\end{split}
+			\end{equation}
+			Übung: $||\xi||=||\bar{\xi}||$. \\
+			Das heißt, die Vektoren $\zeta,\eta \in V$ sind orthonormal und spannen einen 2-dimensionalen Unterraum von V auf. \\
+			Bezüglich der Basis $\langle \zeta, \eta \rangle$ dieses Unterraums hat $T$ die Matrix
+			\begin{equation}
+				\begin{split}
+					T\zeta &= \hat{T}(\frac{1}{\sqrt{2}}(\xi + \bar{\xi})) \\
+					&= \frac{1}{\sqrt{2}}((\alpha+i\beta)\xi+(\alpha-i\beta)\bar{\xi}) \\
+					&= \alpha\zeta - \beta \eta \\
+					T\eta &= \hat{T}(\frac{1}{\sqrt{2}i}(\xi-\bar{\xi})) \\
+					&= \frac{1}{\sqrt{2}i}((\alpha+i\beta)\xi-(\alpha-i\beta)\bar{\xi}) \\
+					&= \alpha\eta + \beta\zeta \\
+					&also \ gilt \\
+					M_{\langle\zeta,\eta \rangle}(T) &= 
+					\begin{pmatrix}
+						\alpha & \beta \\
+						-\beta & \alpha
+					\end{pmatrix}
+				\end{split}
+			\end{equation}
+			Da $T$ normal ist, sieht man nun wie im Beweis von Satz 7.8.1, dass T auch den Unterraum $U = \langle \zeta,\eta \rangle^{\perp}$ invariant lässt und $T|_U$ ebenfalls normal ist. Nun wendet man die Induktionsvoraussetzung auf $U$ an und ist fertig
+		\end{itemize}
+	\end{proof}
+\end{document}
