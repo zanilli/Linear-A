@@ -48,7 +48,7 @@
 \DeclareMathOperator{\Tor}{Tor}
 \DeclareMathOperator{\Ann}{Ann}
 \DeclareMathOperator{\End}{End}
-\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\rg}{rg}
 
 \setcounter{section}{6}
 
@@ -621,7 +621,7 @@
 		Weiterhin existiert ein $U \in \End_{\mathbb{K}}(V)$ mit:
 		\begin{itemize}
 			\item $\ker U=\ker T$ 
-			\item $U|_{\ker T^{\bot}}: \ker T^{\bot} \rightarrow \ran T$ unitär
+			\item $U|_{\ker T^{\bot}}: \ker T^{\bot} \rightarrow \Img T$ unitär
 			\item $T=U|T|$
 		\end{itemize}
 		Insbesondere gilt $U^*U|T|=|T|$, $U^*T=|T|$, $UU^*T=T$. \\
@@ -652,16 +652,16 @@
 		Nach der Rang-Defekt-Formel ist 
 		\begin{equation}
 			\begin{split}
-				\dim (\ran T) &= \dim V-\dim (\ker T) = \dim (\ker T^{\bot}) \\
+				\dim (\Img T) &= \dim V-\dim (\ker T) = \dim (\ker T^{\bot}) \\
 				&= \dim (\ker |T|^{\bot}) \\
-				&= \dim(\ran |T|)
+				&= \dim(\Img |T|)
 			\end{split}
 		\end{equation}
 		Genauer gilt, da $|T|=|T|^*$: 
 		\begin{equation}
-			\ran |T| = \ker |T|^{\bot}
+			\Img |T| = \ker |T|^{\bot}
 		\end{equation}
-		Wir setzen für $y = |T|x \in \ran |T|$:
+		Wir setzen für $y = |T|x \in \Img |T|$:
 		\begin{equation}
 			U_0y:=Tx
 		\end{equation}
@@ -670,7 +670,7 @@
 		\begin{equation}
 			||U_0y||=||Tx|| = || \ |T|x \ || = ||y||
 		\end{equation}
-		Da $\dim (\ran |T|)=\dim (\ran T)$, ist $U_0$ unitär. \\
+		Da $\dim (\Img |T|)=\dim (\Img T)$, ist $U_0$ unitär. \\
 		Man setzt
 		\begin{equation}
 			U|_{\ker T}=0, U|_{\ker T^{\bot}}=U_0
@@ -1114,7 +1114,7 @@
 			\item 
 				$T^*$ surjektiv $\Leftrightarrow$ $T$ injektiv
 			\item 
-				Ist $\dim V < \infty$ oder $\dim W < \infty$, so ist $rg T^* = rg T$
+				Ist $\dim V < \infty$ oder $\dim W < \infty$, so ist $\rg T^* = \rg T$
 		\end{proofenum}
 	\end{theorem}
 	\begin{proof}
@@ -1145,6 +1145,67 @@
 						W/T(V) \arrow[r, "\bar{\varphi}"] & \mathbb{K}
 					\end{tikzcd}
 				\end{center}
+				eine nichttriviale Linearform auf $W$, welche auf $T(V)$ verschwindet, also kann (5.2.1) nicht gelten. \\
+				Insgesamt ist (5.2.1) äquivalent zur Surjektivität von $T$ und (ii) ist bewiesen. \\
+			\item
+				$\Rightarrow:$ Sei $T^*$ surjektiv. Dann liefert (i)
+				\begin{equation}
+					\ker T = (\Img T^*)^o \cap V = (V^*)^o \cap V = \{ 0 \} 
+				\end{equation}
+				$\Leftarrow$: Sei $T$ injektiv und $(x_i)_{i \in I}$ eine Basis von $V$. Dann ist $(Tx_i)_{i \in I}$ ein linear unabhängiges System in $W$. Ergänze dies zu einer Basis $(y_j)_{j \in J}$ von $W, J \supset I, y_i = Tx_i$ für $i \in I$. Ist nun $\varphi \in V^*$ gegeben, so wähle $\Psi \in W^*$ mit
+				\begin{equation}
+					\begin{split}
+						\Psi(Tx_i) &= \varphi (x_i) \\
+						\Psi (y_j) &= 0, j \in J - I
+					\end{split}
+				\end{equation}
+				Beachte, dass Lineare Abbildungen auf Basen frei vorgegeben werden können. Es ist nun für $x = \sum_{endl.} \lambda_i x_i \in V$
+				\begin{equation}
+					\begin{split}
+						\langle x, T^* \Psi \rangle &= \langle Tx, \Psi \rangle \\
+						&= \sum_{endl} \lambda_i \langle Tx_i, \Psi \rangle \\
+						&= \sum_{endl} \lambda_i \langle x_i, \varphi \rangle \\
+						&= \langle x, \varphi \rangle
+					\end{split}
+				\end{equation}
+				also $T^* \Psi = \varphi$. Da $\varphi \in V^*$ beliebig war, folgt die Surjektivität von $T^*$.
+			\item 
+				Sei etwa $\dim W < \infty$. 
+				\begin{exercise}
+					$\dim V < \infty$
+				\end{exercise}
+				\begin{equation}
+					\begin{split}
+						\Rightarrow \rg T^* &= \dim W - \dim \ker T^* \\
+						&= \dim W- \dim (\Img T)^o \ \ \ (i) \\
+						&= \dim W - (\dim W^* - \rg T) \\
+						&= \rg T
+					\end{split}
+				\end{equation}
+				Dabei wurde $\dim W = \dim W^*$ sowie folgendes Resultat verwendet
+				\begin{exercise}
+					Sei $X$ ein $\mathbb{K}$-Vektorraum, $\dim X < \infty$ und $Y \subset X$ ein Unterraum. Dann ist $\dim Y^o = \dim X - \dim Y$
+				\end{exercise}
 		\end{proofenum}
 	\end{proof}
+	Im Folgenden diskutieren wir den Zusammenhang zwischen dualen Abbildungen und Matrizen:
+	\begin{theorem}
+		Seien $V,W$ $\mathbb{K}$-Vektorräume endlicher Dimension sowie $T \in \Hom_{\mathbb{K}}(V,W)$. Seien $A,B$ Basen von $U$ bzw. $W$ mit zugeordneten dualen Basen $A^*, B^*$. Dann gilt
+		\begin{equation}
+			M_{B^*,A*}(T^*) = M_{A,B}(T)^t
+		\end{equation}		 
+	\end{theorem}
+	\begin{proof}
+		Seien $A = \{ a_1,...,a_n \}, B = \{ b_1,....,b_m \}$, \\
+		 $M_{A,B} =: (t_{ij})_{ 1 \geq i \geq m, \ \ 1 \geq j \geq n}$, \\ 
+		 $T a_j = \sum_{i = 1}^m t_{ij} b_i$,\\
+		 $T^* b_j^* = \sum_{i = 1}^n \bar{t_{ij}} a_i^*$.
+		\begin{center}
+			\begin{tikzcd}
+			\langle a_k, T^* b_j^* \rangle \arrow[r, equal] \arrow[d, equal] & \sum_{i=1}^n \bar{t_{ij}} \langle a_k, a_i^* \rangle \arrow[r, equal] & \bar{t_{kj}} \arrow[d, equal, "\textbf{!}"] \\
+			\langle T a_k, b_j^* \rangle \arrow[r, equal] & \sum_{l = 1}^m t_{lk} \langle b_l, b_j^* \rangle \arrow[r, equal] & t_{jk}
+			\end{tikzcd}
+		\end{center}
+	\end{proof}
+	\textbf{Duale Abbildungen und adjungierte Abbildungen im Falle von Vektorräumen mit Skalarprodukt}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.3)  29 MAY 2020 13:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.3)  29 MAY 2020 15:01
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1258,13 +1258,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
 
  []
 
-[20] [21] (./LA_2_Skript.aux) ) 
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1151
+
+ []
+
+[21] [22] (./LA_2_Skript.aux) ) 
 Here is how much of TeX's memory you used:
- 17068 strings out of 492616
- 334943 string characters out of 6129482
- 393547 words of memory out of 5000000
- 20551 multiletter control sequences out of 15000+600000
- 89168 words of font info for 114 fonts, out of 8000000 for 9000
+ 17143 strings out of 492616
+ 336832 string characters out of 6129482
+ 393546 words of memory out of 5000000
+ 20624 multiletter control sequences out of 15000+600000
+ 97798 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,20n,82p,504b,1197s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2019/texmf-dist/fonts/enc/dv
@@ -1278,10 +1283,10 @@ ourier-ms.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putb
 8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/
 local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on LA_2_Skript.pdf (21 pages, 170611 bytes).
+Output written on LA_2_Skript.pdf (22 pages, 175781 bytes).
 PDF statistics:
- 116 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
