@@ -1192,7 +1192,7 @@
 	\begin{theorem}
 		Seien $V,W$ $\mathbb{K}$-Vektorräume endlicher Dimension sowie $T \in \Hom_{\mathbb{K}}(V,W)$. Seien $A,B$ Basen von $U$ bzw. $W$ mit zugeordneten dualen Basen $A^*, B^*$. Dann gilt
 		\begin{equation}
-			M_{B^*,A*}(T^*) = M_{A,B}(T)^t
+			M_{B^*,A^*}(T^*) = M_{A,B}(T)^t
 		\end{equation}		 
 	\end{theorem}
 	\begin{proof}
@@ -1207,5 +1207,32 @@
 			\end{tikzcd}
 		\end{center}
 	\end{proof}
-	\textbf{Duale Abbildungen und adjungierte Abbildungen im Falle von Vektorräumen mit Skalarprodukt}
+	\textbf{Duale Abbildungen und adjungierte Abbildungen im Falle von Vektorräumen mit Skalarprodukt} \\
+	Von nun an sind $V,W,...$ endlich-dimensionale $\mathbb{K}$-Vektorräume ($\mathbb{K} \in \{ \mathbb{R}, \mathbb{C} \}$) mit Skalarprodukt. Hier müssen wir notationell etwas pedantisch sein: \\
+	$\langle -|- \rangle_V$ bezeichnet Skalarprodukte, $\langle -,- \rangle_{V,V^*}$ die Dualität. Weiterhin bezeichnet $T^t$ die duale (transponierte) Abbildung und $T^{ad}$ die adjungierte Abbildung. $b: V \rightarrow V^*$ bezeichnet den Isomorphismus aus Satz 8.4.4 und $\phi: V^* \rightarrow V$ bezeichne dessen Inverses. Beachte, dass für $\mathbb{K}=\mathbb{C}$ die Abbildung $b,\phi$ antilinear sind, bzw. linear, wenn man zu $\bar{V}$ übergeht. \\
+	Für $x,y \in V$ gilt nun
+	\begin{equation}
+		\langle y, x^b \rangle_{V,V^*} = x^b(y) = \langle x | y \rangle_V \overset{!}{=} \langle y | x \rangle_{\bar{V}}
+	\end{equation}
+	M. a. W. durch $b$ geht das Skalarprodukt auf $\bar{V}$ in die Dualität von $V, V^*$ über. \\
+	Sei nun $T \in \Hom_{\mathbb{K}}(V,W)$. Dann gilt für $x \in V, y \in W$: 
+	\begin{equation}
+		\begin{split}
+			\langle x, T^t y^b \rangle &= \langle x, (T^t y^b)^{\phi b} \rangle_{V,V^*} \\
+			&= \langle (T^t y^b)^{\phi} | x \rangle_V
+		\end{split}
+	\end{equation}
+	andererseits
+	\begin{equation}
+		= \langle Tx, y^b \rangle_{W, W^*} = \langle y | Tx \rangle_W
+	\end{equation}
+	Liest man dies von ganz rechts rückwärts, so sehen wir, dass $T^{ad} = \phi \circ T^t \circ b$. \\
+	Auf den ersten Blick mag dies erstaunen, denn $T \mapsto T^t$ ist linear, während $T \mapsto T^{ad}$ antilinear ist. Es hat jedoch alles seine Richtigkeit, denn wegen der Antilinearität von $\phi, b$ erhalten wir für $x \in W, \lambda \in \mathbb{K}$
+	\begin{equation}
+		\begin{split}
+			(\lambda T^{ad})(x) &= \left( (\lambda T )^t x^b \right)^{\phi} = (\lambda T^t x^b)^{\phi} \\
+			&= \bar{\lambda}(T^t x^b)^{\phi} \\
+			&= \bar{\lambda} T^{ad}(x)
+		\end{split}
+	\end{equation}
 \end{document}

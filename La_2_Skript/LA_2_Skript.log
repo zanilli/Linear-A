@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.3)  29 MAY 2020 15:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.3)  29 MAY 2020 22:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1263,7 +1263,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 1148--1151
 
  []
 
-[21] [22] (./LA_2_Skript.aux) ) 
+[21]
+Overfull \hbox (6.76884pt too wide) in paragraph at lines 1210--1214
+\FMS/futm/m/n/12 h^^@j^^@i[]$ \T1/futs/m/n/12 be-zeich-net Ska-lar-pro-duk-te, 
+$\FMS/futm/m/n/12 h^^@\FML/futmi/m/it/12 ; \FMS/futm/m/n/12 ^^@i[]$ \T1/futs/m/
+n/12 die Dua-li-tät. Wei-ter-hin be-zeich-net $\FML/futmi/m/it/12 T[]$ \T1/futs
+/m/n/12 die dua-le (trans-
+ []
+
+[22] (./LA_2_Skript.aux) ) 
 Here is how much of TeX's memory you used:
  17143 strings out of 492616
  336832 string characters out of 6129482
@@ -1272,18 +1280,18 @@ Here is how much of TeX's memory you used:
  97798 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,20n,82p,504b,1197s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dv
-ips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/
-fourier-bb.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/f
-ourier-mcl.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/f
-ourier-mex.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/f
-ourier-ml.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fo
-urier-mlit.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/f
-ourier-ms.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putb
-8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb
-></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/
-local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on LA_2_Skript.pdf (22 pages, 175781 bytes).
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fouri
+er-bb.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourie
+r-mcl.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourie
+r-mex.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourie
+r-ml.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourier
+-mlit.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourie
+r-ms.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putb8a.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local
+/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on LA_2_Skript.pdf (22 pages, 178531 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
