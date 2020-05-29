@@ -13,8 +13,11 @@
 \usepackage{fourier}
 \usepackage{enumitem}
 \usepackage{titling}
-
-
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{eqparbox}
+\usepackage{titling}
+\usetikzlibrary{quotes,babel,angles}
 
 \newtheorem{theorem}{Satz}
 \newtheorem{lemma}[theorem]{Lemma}
@@ -26,7 +29,7 @@
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
-\newtheorem{exercise}[theorem]{Übung}
+\newtheorem*{exercise}{Übung}
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Bemerkung}
@@ -36,6 +39,16 @@
 
 \renewcommand{\bar}[1]{\overline{#1}}
 \renewcommand{\hat}[1]{\widehat{#1}}
+
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Img}{Im}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\ran}{ran}
 
 \setcounter{section}{6}
 
@@ -64,7 +77,7 @@
 	Im gesamten Abschnitt seien $V, W$ euklidische oder unitäre Vektorräume über $\mathbb{K}(= \mathbb{R}; \mathbb{C})$. \\
 	
 	\begin{definition}
-		Sei $T \in \mathcal{L}(V) := End_{\mathbb{K}}(V)$. $T$ heißt \\
+		Sei $T \in \mathcal{L}(V) := \End_{\mathbb{K}}(V)$. $T$ heißt \\
 		\begin{itemize}
 			\item \textbf{normal}, falls $T^{*} \cdot T = T \cdot T^*$
 			\item \textbf{unitär}, falls $T^{*} \cdot T = T \cdot T^* = Id_V$
@@ -77,7 +90,7 @@
 		\begin{itemize}
 			\item In Punkt 1 und 2 ist die Existenz von $T^*$ Teil der Vorraussetzung.
 			\item In Punkt 2-4 sind die Endomorphismen bereits normal.
-			\item Ist $dim(V)<\infty$, so folgt aus $T^* \cdot T = Id_V$ (bzw. $T \cdot T^* = Id_V$) bereits, dass $T$ unitär ist. 
+			\item Ist $\dim (V)<\infty$, so folgt aus $T^* \cdot T = Id_V$ (bzw. $T \cdot T^* = Id_V$) bereits, dass $T$ unitär ist. 
 		\end{itemize}
 	\end{remark}
 	\begin{lemma}
@@ -96,7 +109,7 @@
 				&= ||T^*x ||^2
 			\end{split}
 		\end{equation}
-		$\Leftarrow$: Umgekehrt gelte Gleichung (7.1.1) für $x \in V$. Dann liefert die Polarisierungsidentität (Satz 1.6 in LA I) (exemplarisch für $\mathbb{K} = \mathbb{C}$):
+		$\Leftarrow$: Umgekehrt gelte Gleichung (7.1.1) für $x \in V$. Dann liefert die Polarisierungsidentität (Satz 7.1.6 in LA I) (exemplarisch für $\mathbb{K} = \mathbb{C}$):
 		\begin{equation}
 			\begin{split}
 				\langle Tx, Ty \rangle &= \frac{1}{4} \sum\limits_{k=0}^3 i^k \langle T(y+i^kx), T(y+i^kx) \rangle \\
@@ -137,16 +150,16 @@
 	\begin{theorem}
 		Sei $T \in \mathcal{L}(V)$ normal. Dann gilt: \\
 		\begin{proofenum}
-			\item $kerT = kerT^*$
-			\item Mit $T$ ist auch $T-\lambda \cdot Id_V$ normal für $\lambda \in \mathbb{K}$. Es gilt $ker(T-\lambda \cdot Id_V) = ker(T^* - \lambda \cdot Id)$. \\ Insbesondere haben $T$ und $T^*$ dieselben Eigenwerte mit gleichen Vielfachheiten.
-			\item Sind $\lambda \neq \mu$ verschiedene Eigenwerte von $T$, so stehen die entsprechenden Eigenräume senkrecht: $ker(T-\lambda \cdot Id_V) \perp ker(T-\mu \cdot Id_V)$.
+			\item $\ker T = \ker T^*$
+			\item Mit $T$ ist auch $T-\lambda \cdot Id_V$ normal für $\lambda \in \mathbb{K}$. Es gilt $\ker (T-\lambda \cdot Id_V) = \ker (T^* - \lambda \cdot Id)$. \\ Insbesondere haben $T$ und $T^*$ dieselben Eigenwerte mit gleichen Vielfachheiten.
+			\item Sind $\lambda \neq \mu$ verschiedene Eigenwerte von $T$, so stehen die entsprechenden Eigenräume senkrecht: $\ker (T-\lambda \cdot Id_V) \perp \ker (T-\mu \cdot Id_V)$.
 		\end{proofenum}
 	\end{theorem}
 	
 	\begin{proof} 
 		\begin{proofenum}
 			\item 1 folgt unmittelbar aus Lemma 7.1.2 :\\
-				$x \in kerT \Rightarrow Tx = 0 \Rightarrow 0 = ||Tx || = ||T^*x||$, also $x \in kerT^*$
+				$x \in \ker T \Rightarrow Tx = 0 \Rightarrow 0 = ||Tx || = ||T^*x||$, also $x \in \ker T^*$
 			\item 
 				\begin{equation}
 					\begin{split}
@@ -174,42 +187,25 @@
 	
 	\begin{theorem}
 		Für $U \in \mathcal{L}(V)$ sind äquivalent : \\
-		\begin{proofenum}
-			\item $U$ ist unitär. \\		
+		\begin{proofenum}	
 			\item $\forall_{x,y \in V} \langle Ux, Uy \rangle = \langle x,y \rangle$ \\
 			\item $\forall_{x \in V} || Ux|| = ||x||$
 			\item Ist $\{ e_1,...,e_n \}$ ein Orthogonalsystem, so ist auch $\{ Ue_1,...,Ue_n \}$ ein Orthogonalsystem.
 		\end{proofenum}
 		\begin{remark}
-			Ist $U$ unitär, so ist $U$ invertierbar mit $U^{-1} = U^*$.
+			Ist $U$ unitär, so gelten (i)-(iii).Ist $\dim (V)<\infty$, so implizieren (i),(ii) oder (iii) auch, dass $U$ unitär ist.
 		\end{remark}
 	\end{theorem}
 	
 	\begin{proof}
-		(i) $\Rightarrow$ (ii): \\
+		(i) $\Rightarrow$ (iii): \\
 		\begin{equation}
-			\langle Ux, Uy \rangle = \langle U^*Ux,y \rangle = \langle x,y \rangle
-		\end{equation}
-		(ii) $\Rightarrow$ (iv): \\
-		\begin{equation}
-			\langle Ue_i,Ue_j \rangle \overset{(ii)}{=} \langle e_i,e_j \rangle = \delta_{ij}
+			\langle Ue_i,Ue_j \rangle \overset{(i)}{=} \langle e_i,e_j \rangle = \delta_{ij}
 		\end{equation}		
-		(iv) $\Rightarrow$ (iii): \\
-		Klar.\\
 		(iii) $\Rightarrow$ (ii): \\
-		Folgt mit der Polarisierungsformal wie in Beweis von Lemma 7.1.2:
-		\begin{equation}
-			\begin{split}
-				\langle Ux, Uy \rangle &\overset{(\mathbb{K} = \mathbb{C})}{=} \frac{1}{4} \sum\limits_{k=0}^3 i^k \langle U(x+i^ky), U(x+i^ky) \rangle \\
-				&= \frac{1}{4} \sum\limits_{k=0}^3 i^k \langle x + i^ky,x+i^ky \rangle \\
-				&= \langle x,y \rangle
-			\end{split}
-		\end{equation}
+		Klar.\\
 		(ii) $\Rightarrow$ (i): \\
-		\begin{equation}
-			\langle U^* Ux,y \rangle = \langle Ux, Uy \rangle = \langle x,y \rangle
-		\end{equation}
-		$\Rightarrow U^* U = Id_V$ (nach Lemma 7.1.3), $UU^*$ analog
+		Folgt aus der Polarisierungsformel.
 	\end{proof}
 	
 	\begin{corollary}
@@ -223,6 +219,12 @@
 		\begin{equation}
 			(T_1 \cdot T_2)^* T_1 T_2 = T_2^*(T_1^*T_1)T_2 = T_2^*T_2=Id_V
 		\end{equation}
+		Beweis der Bemerkung: \\
+		Ist $U$ unitär, so folgt für $x,y \in V$:
+		\begin{equation}
+			\langle Ux,Uy \rangle = \langle U^*Ux,y \rangle =\langle x,y \rangle
+		\end{equation}
+		Ist $\dim (V)<\infty$ und gelte für $U \in \mathcal{L}(V)$ die äquivalenten Aussagen (i),(ii),(iii), so liefert Satz 7.4.2 die Existenz von $U^*$ und somit (i).
 	\end{proof}	
 	
 	Unitarität lässt sich in Koordinaten sehr leicht testen:
@@ -248,7 +250,7 @@
 	\end{remark}
 	
 	\begin{theorem}{(Spektralsatz für normale Endomorphismen, $\mathbb{K} = \mathbb{C}$)}
-		Sei $V$ ein unitärer Vektorraum, $\mathbb{K} = \mathbb{C}$, $dim V = n < \infty$. Dann ist $T \in \mathcal{L}(V)$ genau dann normal, wenn es zu $T$ eine Orthonormalbasis von $V$ gibt, welche nur aus Eigenvektoren von $T$ besteht.
+		Sei $V$ ein unitärer Vektorraum, $\mathbb{K} = \mathbb{C}$, $\dim V = n < \infty$. Dann ist $T \in \mathcal{L}(V)$ genau dann normal, wenn es zu $T$ eine Orthonormalbasis von $V$ gibt, welche nur aus Eigenvektoren von $T$ besteht.
 	\end{theorem}
 	
 	\begin{proof}
@@ -285,11 +287,11 @@
 		folglich ist $TT^* = T^* T$, d.h. $T$ ist normal. \\
 		Umgekehrt sei $T$ normal: \\
 		 Da $\mathbb{K} = \mathbb{C}$, existiert zu $T$ ein normierter Eigenvektor $e_1$ mit $||e_1 ||=1, Te_1 = \lambda_1 e_1$ und da $T$ normal ist, gilt $T^* e_1 = \bar{\lambda}_1 e_1 $. \\
-		 Wir führen nun eine Induktion nach $n = dimV$ und nehmen an, die Behauptung gelte für alle Dimensionen $<n$: \\
+		 Wir führen nun eine Induktion nach $n = \dim V$ und nehmen an, die Behauptung gelte für alle Dimensionen $<n$: \\
 		 $U = \langle e_1 \rangle^{\perp} \subset V$ ist ein unitärer Vektorraum der Dimension $n-1$. \\
 		 Wir zeigen:
 		 \begin{claim}
-		 	$T|_U \in End_{\mathbb{C}}(U)$ ist normal.
+		 	$T|_U \in \End_{\mathbb{C}}(U)$ ist normal.
 		 \end{claim}
 		 Die Induktionsvorraussetzung liefert die Existenz einer Orthonormalbasis $\{ e_2,...,e_n \}$ von $U$ mit $Te_j = \lambda_j e_j$. $\{ e_1,e_2,...,e_n \}$ ist dann die gewünschte Basis. \\
 		 Es bleibt Behauptung 1 zu zeigen: \\
@@ -311,11 +313,11 @@
 	\begin{equation}
 		\langle z,w \rangle = \sum\limits_{j=1}^n \bar{z}_j w_j
 	\end{equation}
-	$V_{\mathbb{C}}$ ist gleichzeitig ein reeller Vektorraum, indem man die Zerlegung in Real- und Imaginärtiel komponentenweise vornimmt: \\
+	$V_{\mathbb{C}}$ ist gleichzeitig ein reeller Vektorraum, indem man die Zerlegung in Real- und Imaginärteil komponentenweise vornimmt: \\
 	\begin{proofenum}
 		\item Jedes $z \in \mathbb{C}^n$ besitzt eine eindeutige Zerlegung $z = x+iy$ mit $x,y \in \mathbb{R}^n$. Offenbar ist $V = \mathbb{R}^n$ ein $\mathbb{R}$-Vektorraum.
 		\item Es gibt eine $\mathbb{C}$antilineare Involution \ $\bar{\cdot}: V_{\mathbb{C}} \rightarrow V_{\mathbb{C}}$ mit $V = \{ z \in V_{\mathbb{C}} | \bar{z} = z \}$ (klar: \ $\bar{\cdot}$ \ ist die komplexe Konjugation ).
-		\item Ist $T \in End_{\mathbb{R}}$, so besitzt $T$ eine eindeutige Fortsetzung $\hat{T} \in End_{\mathbb{C}}(V_{\mathbb{C}})$ (klar: dies ist die gleiche Matrix). \\
+		\item Ist $T \in \End_{\mathbb{R}}$, so besitzt $T$ eine eindeutige Fortsetzung $\hat{T} \in \End_{\mathbb{C}}(V_{\mathbb{C}})$ (klar: dies ist die gleiche Matrix). \\
 		Es gilt, da $M_B(T)$ reell ist $\bar{T(z)} = T(\bar{z})$.
 		\item Es gibt genau ein hermitesches Skalarprodukt auf $V_{\mathbb{C}}$, welches das (Standard)skalarprodukt fortsetzt (klar: dies ist das Standardskalarprodukt auf $\mathbb{C}^n$, Eindeutigkeit: Übung)
 	\begin{attention}
@@ -328,15 +330,15 @@
 			\end{split}
 		\end{equation}
 	\end{attention}
-		\item Ist $T \in End_{\mathbb{R}}(\mathbb{R}^n)$ normal, so ist auch $\hat{T} \in End_{\mathbb{C}}(\mathbb{C}^n)$ normal.
+		\item Ist $T \in \End_{\mathbb{R}}(\mathbb{R}^n)$ normal, so ist auch $\hat{T} \in \End_{\mathbb{C}}(\mathbb{C}^n)$ normal.
 	\end{proofenum}
 	Die hier gemachten Bemerkungen sind nicht auf den $\mathbb{C}^n$ / $\mathbb{R}^n$ begrenzt. Allgemein gilt: \\
 	\begin{theorem}
-		Sei $V$ ein euklidischer Vektorraum (Vektorraum mit Skalarprodukt über $\mathbb{R}$). Darum existiert ein komplexer Vektorraum $V_{\mathbb{C}}$, so dass (i)-(v) gelten. (Details: Übung)
+		Sei $V$ ein euklidischer Vektorraum (Vektorraum mit Skalarprodukt über $\mathbb{R}$). Dann existiert ein komplexer Vektorraum $V_{\mathbb{C}}$, so dass (i)-(v) gelten. (Details: Übung)
 	\end{theorem}
 	Nach dieser Vorbereitung können wir den Spektralsatz für normale Endomorphismen über $\mathbb{K} = \mathbb{R}$ formulieren. 
 	\newpage
-	\begin{theorem}{Spektralsatz für normale Endomorphismen,  $\mathbb{K} = \mathbb{R}$}
+	\begin{theorem}{(Spektralsatz für normale Endomorphismen,  $\mathbb{K} = \mathbb{R}$)}
 		Sei $V$ ein euklidischer Vektorraum. Dann ist $T \in \mathcal{L}(V)$ genau dann normal, wenn es für $T$ eine Orthonormalbasis $B$ von $V$ gibt, bzgl. der $M_B(T)$ die Gestalt \\
 		\begin{equation}
 			M_B(T) =
@@ -409,9 +411,9 @@
 		Wir berechnen das charakteristische Polynom zunächst für $\mathcal{Q}_j$: \\
 		\begin{equation}
 			\begin{split}
-				det\begin{pmatrix}
+				\det\begin{pmatrix}
 					X - \alpha_j & \beta_j \\
-					\beta_j & X- \alpha_j
+					-\beta_j & X- \alpha_j
 				\end{pmatrix} &= X^2-2\alpha_jX+\alpha_j^2+\beta_j^2 \\
 				&= X^2 - 2 Re(\mu_j)X+ |\mu_j|^2, \ \ \  \mu_j := \alpha_j + i \beta_j \\
 				&= (X- \mu_j) (X- \bar{\mu}_j)
@@ -422,16 +424,16 @@
 			\chi_T(X) = \prod\limits_{j=1}^r (X-\lambda_j) \prod\limits_{j=1}^s (X-\mu_j)(X-\bar{\mu}_j)
 		\end{equation}
 		Dies beendet den Beweis der Richtung $\Leftarrow$. \\
-		Zum Beweis der Umkehrung wenden wir Induktion über $n = dim(V)$. Für $n=1$ ist jeder Endomorphismus normal und schon in Diagonalgestalt, es ist also nichts zu zeigen. \\
-		Die Behauptung sei bewiesen für Dimensionen $<n$ und sei nun $n=dimV$ und $T \in End_{\mathbb{R}}(V)$ normal gegeben. Dann gibt es die folgenden zwei Fälle: \\
+		Zum Beweis der Umkehrung wenden wir Induktion über $n = \dim (V)$. Für $n=1$ ist jeder Endomorphismus normal und schon in Diagonalgestalt, es ist also nichts zu zeigen. \\
+		Die Behauptung sei bewiesen für Dimensionen $<n$ und sei nun $n=\dim V$ und $T \in \End_{\mathbb{R}}(V)$ normal gegeben. Dann gibt es die folgenden zwei Fälle: \\
 		\begin{itemize}
 			\item \textbf{1. Fall:} $T$ besitzt einen reellen Eigenwert.\\
 				Dann erfolgt der Beweis wie in Satz 7.8.1. Man nehme einen Eigenvektor $e_1$, $||e_1||=1, \ Te_1 = \lambda_1 e_1, \ \lambda_1 \in \mathbb{R}$ und wendet die Induktionsvoraussetzung auf den normalen Endomorphismus $T|_{\langle e_1 \rangle^{\perp}}$ an.
 			\item \textbf{2. Fall:} $T$ besitzt keinen reellen Eigenwert. \\
-			Nun betrachten wir $\hat{T} \in End_{\mathbb{C}}(V_{\mathbb{C}})$ (Satz 7.8.2).
+			Nun betrachten wir $\hat{T} \in \End_{\mathbb{C}}(V_{\mathbb{C}})$ (Satz 7.8.2).
 			$\hat{T}$ ist normal mit gleichem charakteristischem Polynom wie $T$ (Übung). Sei also $\mu = \alpha + i \beta, \ \beta \neq 0$ ein komplexer Eigenwert von $\hat{T}$ mit normiertem Eigenvektor $\xi \in V_{\mathbb{C}}$. Es ist nach Satz 7.8.2 
 			\begin{equation}
-				\hat{T}(\overline{\xi})=\overline{T(\xi)}= \overline{\mu \cdot \xi} = \overline{\mu} \cdot \overline{\xi}
+				\hat{T}(\overline{\xi})=\overline{\hat{T}(\xi)}= \overline{\mu \cdot \xi} = \overline{\mu} \cdot \overline{\xi}
 			\end{equation}
 			und da $\mu \neq \bar{\mu}$ und $\hat{T}$ normal ist, folgt aus Satz 7.7.4, dass $\xi \perp \bar{\xi}$, also mit 
 			\begin{equation}
@@ -451,10 +453,10 @@
 			Bezüglich der Basis $\langle \zeta, \eta \rangle$ dieses Unterraums hat $T$ die Matrix
 			\begin{equation}
 				\begin{split}
-					T\zeta &= \hat{T}(\frac{1}{\sqrt{2}}(\xi + \bar{\xi})) \\
+					T\zeta &= \hat{T}\left(\frac{1}{\sqrt{2}}(\xi + \bar{\xi})\right) \\
 					&= \frac{1}{\sqrt{2}}((\alpha+i\beta)\xi+(\alpha-i\beta)\bar{\xi}) \\
 					&= \alpha\zeta - \beta \eta \\
-					T\eta &= \hat{T}(\frac{1}{\sqrt{2}i}(\xi-\bar{\xi})) \\
+					T\eta &= \hat{T}\left(\frac{1}{\sqrt{2}i}(\xi-\bar{\xi})\right) \\
 					&= \frac{1}{\sqrt{2}i}((\alpha+i\beta)\xi-(\alpha-i\beta)\bar{\xi}) \\
 					&= \alpha\eta + \beta\zeta \\
 					&also \ gilt \\
@@ -467,5 +469,682 @@
 			\end{equation}
 			Da $T$ normal ist, sieht man nun wie im Beweis von Satz 7.8.1, dass T auch den Unterraum $U = \langle \zeta,\eta \rangle^{\perp}$ invariant lässt und $T|_U$ ebenfalls normal ist. Nun wendet man die Induktionsvoraussetzung auf $U$ an und ist fertig
 		\end{itemize}
+	\end{proof}
+	\subsection{Orthogonale und unitäre Abbildungen}
+	Wie immer seien $V,W,...$ $\mathbb{K}$-Vektorräume mit Skalarprodukt. \\
+	\begin{definition}
+		$U \in \Hom_{\mathbb{K}}(V,W)$ heißt \textbf{Isometrie}, falls $||Ux||=||x|| \ \forall_{x \in V}$.
+		Ist zusätzlich $U$ surjektiv, so nennt man $U$ unitär.
+	\end{definition}
+	\begin{remark}
+		\begin{proofenum}
+			\item Der Unterschied zu Abschnitt 7 ist, dass $U$ a priori zwischen verschiedenen Vektorräumen abbildet. Wir sehen gleich, dass Definition 7.9.1 mit dem Unitaritätsbegriff aus Abschnitt 7 konsistent ist.
+			\item Die Terminologie weicht hier von Kowalsky ab. Dort wird $U$ schon unitär genannt, wenn es isometrisch ist. Hier wird es anders gemacht, da klar zwischen den Begriffen Isometrie und Isomorphismus klar unterschieden werden sollte und der Begriff unitär  den Isomorphismen von Vektorräumen mit Skalarprodukt vorbehalten werden sollte.
+			\item Ist der Grundkörper $ \mathbb{K}=\mathbb{R}$, so spricht man auch von Orthogonalen Abbildungen.
+			\item Aus Def. 9.1 folgt unmittelbar, das Isometrien injektiv sind. 
+			\item Für Isometrien gilt die Äquivalenz $(i) \Leftrightarrow (ii) \Leftrightarrow (iii)$ des Satzes 7.7.5.
+		\end{proofenum}
+	\end{remark}
+	\begin{theorem}
+		Ist $U \in \Hom_{\mathbb{K}}(V,W)$ unitär im Sinne von Definition 7.9.1, so ist $U$ bijektiv, $U^*$ existiert und ist gleich $U^{-1}$ und es gelten $U^*U=Id_{V}, UU^*= Id_W$. \\
+		Folglich ist Definition 7.9.1 mit Definition 7.1.2 konsistent.
+	\end{theorem}
+	\begin{proof}
+		Die Bijektivität folgt aus der Definition. Wie oben bemerkt, gelte (i)-(iii) aus Satz 7.7.5. Also gilt für $x \in V, y \in W$
+		\begin{equation}
+			\langle Ux,y \rangle = \langle Ux,U(U^{-1}y) \rangle = \langle x, U^{-1}y \rangle
+		\end{equation}
+		somit gilt $U^{-1} = U^*$
+	\end{proof}
+	\begin{theorem}
+			Sei $U \in \End_{\mathbb{K}}(V)$unitär. Dann ist $U$ normal und sämtliche komplexe Eigenwerte haben den Betrag 1.\\
+			Sei umgekehrt $\dim V<\infty$ und $T \in \End_{\mathbb{K}}(V)$ normal mit sämtlichen komplexen Eigenwerten von Betrag 1, so ist $T$ schon unitär.			
+	\end{theorem}
+	\begin{proof}
+		$\Rightarrow$: \\
+		Sei $U$ unitär. Dann ist $U^*U=Id=UU^*$, also ist $U$ normal. Ist $Ux=\lambda x, x \neq 0$ ein Eigenvektor mit Eigenwert $\lambda$, so folgt
+		\begin{equation}
+			0 \neq ||x||=||Ux||=||\lambda x||=|\lambda|\cdot ||x||
+		\end{equation}
+		also $|\lambda|=1$. \\
+		$\Leftarrow$: \\
+		Sei nun $T \in \End_{\mathbb{K}}(V)$ normal mit $\dim V < \infty$, so dass alle Eigenwerte Betrag 1 haben. \\
+		Ist $\mathbb{K=\mathbb{R}}$, so gehen wir zu $\hat{T} \in \End_{\mathbb{C}}(V_{\mathbb{C}})$ über. Die Eigenwerte von $\hat{T}$ sind sämtliche komplexe Eigenwerte von $T$, also von Betrag 1. Nach Satz 7.8.1 existiert eine Orthonormalbasis $B$ mit
+		\begin{equation}
+			M_B(\hat{T})=\begin{pmatrix}
+				\lambda_1 & \dots & 0 \\
+				\vdots & \ddots & \vdots \\
+				0 & \dots & \lambda_n
+			\end{pmatrix}
+		\end{equation}
+		folglich gilt
+		\begin{equation}
+			M_B(\hat{T}^*\hat{T})= \begin{pmatrix}
+				|\lambda_1|^2 & \dots & 0 \\
+				\vdots & \ddots & \vdots \\
+				0 & \dots & |\lambda_n|^2
+			\end{pmatrix} = Id
+		\end{equation}
+		Analog gilt $M_B(\hat{T}\hat{T}^*)=Id$.
+		Also ist $\hat{T}$ unitär. \\		
+		Es gilt aber
+		\begin{equation}
+			\hat{T^*T}= \hat{T^*}\hat{T}=\hat{T}^* \hat{T}=Id_{V_{\mathbb{C}}}=\hat{Id_V}
+		\end{equation}
+		woraus folgt
+		\begin{equation}
+			T^*T=TT^*=Id
+		\end{equation}
+	\end{proof}
+	Aufgrund dieses Satzes sind die Spektralsätze des Abschnittes 7.8 auf unitäre Endomorphismen anwendbar. Wir gehen noch auf den reellen Fall ein: \\	
+	Ist $U \in \End_{\mathbb{R}}(V), \dim V < \infty$ unitär, so besitzt $V$ nach Satz 7.8.3 eine Orthonormalbasis, sodass
+	\begin{equation}
+		M_B(U) = \begin{pmatrix}
+			\lambda_1 & & & &0 & \\
+			& \ddots& &  & & \\
+			 & &\lambda_r & & & \\
+			& & & \mathcal{Q}_1 & &  \\
+			& & & & \ddots&  \\
+			& 0& & & & \mathcal{Q}_s
+		\end{pmatrix}
+	\end{equation}
+	Dabei ist $\lambda_j \in \mathbb{R}, |\lambda_j|=1$, also $\lambda_j \in \{ -1,1 \}$. \\
+	Weiterhin ist
+	\begin{equation}
+		\mathcal{Q}_j = \begin{pmatrix}
+			\alpha_j & \beta_j \\
+			-\beta_j & \alpha_j
+		\end{pmatrix}, \beta_j \neq 0
+	\end{equation}		
+	wobei $\mu_j = \alpha_j +i \beta_j$ ein komplexer Eigenwert von $\hat{U}$ ist. Nun ist
+	\begin{equation}
+		1 = |\mu_j|^2 = \alpha_j^2+\beta_j^2
+	\end{equation}
+	In der Analysis lernt man, dass es für $\alpha_j, \beta_j \in \mathbb{R}$ mit $\alpha_j^2+ \beta_j^2$ genau ein $\varphi_j \in (-\pi,\pi]$ gibt mit $\alpha_j = \cos (\varphi_j), \ \beta_j = \sin( \varphi_j)$. Damit können also die $\mathcal{Q}_j$ in der Form
+	\begin{equation}
+		\mathcal{Q}_j = \begin{pmatrix}
+			\cos( \varphi_j) & \sin( \varphi_j) \\
+			-\sin (\varphi_j )& \cos (\varphi_j)
+		\end{pmatrix}
+	\end{equation}
+	geschrieben werden. \\
+	\textbf{Die Polarzerlegung} \\
+	In diesem Unterabschnitt gilt $\dim V < \infty$. \\
+	Wir erinnern daran (§7.6), dass $A \in \End_{\mathbb{K}}(V)$ positiv (semi)definit heißt, falls $A = A^*$ und \\ 
+	 $\forall_{x \in V} \langle Ax,x \rangle \geq 0$ (im Falle positiv definit: = 0 nur für $x=0$). \\
+	Falls $\dim V<\infty$, so ist $A>0(\geq 0)$ genau dann, wenn sämtliche Eigenwerte $>0(\geq 0)$ sind. (Wir schreiben kurz $A >0 (\geq 0)$, falls $A=A^*$ und $A$ positiv (semi)definit ist.)
+	\begin{theorem}{(Quadratwurzel)}
+		Sei $\dim V <\infty$ und $A \in \End_{\mathbb{K}}(V)$ positiv semi-definit. \\
+		Dann existiert genau ein $S \in \End_{\mathbb{K}}(V), S \geq 0$ mit $S^2=A$.
+		(Schreibweise: $S = \sqrt{A}=A^{\frac{1}{2}}$) \\
+		Die Eigenwerte von $S$ sind genau $\sqrt{\lambda}, \lambda \in spec(A)(\{\lambda \in \mathbb{K}| \exists v \in V: Tv = \lambda v \})$
+	\end{theorem}
+	\begin{proof}
+		\textbf{Existenz:} \\	
+		Sei $\{ e_1,...,e_n \}$ eine Orthonormalbasis von $V$ mit $Ae_j=\lambda_j e_j$, beachte $\lambda_j \geq 0$. \\
+		Setze
+		\begin{equation}
+			Se_j := \sqrt{\lambda_j}e_j
+		\end{equation}
+		Das legt $S$ fest. Offenbar ist $S = S^* \geq 0$ und $S^2e_j = \lambda_je_j=Ae_j$, also $S^2 = A$. \\
+		\textbf{Eindeutigkeit}: \\		
+		Wir halten fest, dass auf den Eigenvektoren von $A$ zu den Eigenwerten $\lambda$ der Operator $S$ durch $Sx = \sqrt{\lambda}x$ operiert. \\
+		Sei nun $\tilde{S} = \tilde{S}^* \geq 0, \tilde{S}^2=A$. Dann sei $\{ f_1,...,f_n \}$ eine Orthonormalbasis von $V$ mit $\tilde{S}f_j= \mu_jf_j, \mu_j \geq 0$. \\
+		Es gilt $Af_j = \tilde{S}^2f_j = \mu_j^2f_j$, also ist $\mu_j^2$ ein Eigenwert von $A$.
+		Dann folgt aber
+		\begin{equation}
+			Sf_j = \sqrt{\mu_j^2}f_j= \mu_jf_j = \tilde{S}f_j-
+		\end{equation}
+	\end{proof}
+	\begin{exercise}
+		Alternativbeweis mit Hilfe der Analysis.
+	\end{exercise}
+	\begin{definition}{\textbf{+ Satz}}
+		Für $T \in \End_{\mathbb{K}}(V),\dim V < \infty$ ist $T^*T \geq 0$ und es gilt: \\
+		$T^*T >0 \Leftrightarrow T$ invertierbar. \\
+		Wir setzen $|T|:= \sqrt{T^*T}$
+	\end{definition}
+	\begin{proof}
+		Da $\dim V < \infty$ ist injektiv $\Leftrightarrow$ bijektiv. \\
+		\begin{equation}
+			\langle T^*Tx,x \rangle = \langle Tx,Tx \rangle = ||Tx||^2 \geq 0
+		\end{equation}
+		Daraus folgt
+		\begin{equation}
+			x \in \ker T \Leftrightarrow \langle T^*Tx,x \rangle = 0
+		\end{equation}
+		Daraus folgt die Behauptung.
+	\end{proof}
+	\newpage
+	\begin{theorem}{(Polarzerlegung)}
+		Sei $\dim V < \infty$ und $T \in \End_{\mathbb{K}}(V)$. Dann ist $|T|$ der eindeutig bestimmte Operator $S \geq 0$ mit $||Tx||=||Sx|| \ \forall_{x \in V}$. \\
+		Weiterhin existiert ein $U \in \End_{\mathbb{K}}(V)$ mit:
+		\begin{itemize}
+			\item $\ker U=\ker T$ 
+			\item $U|_{\ker T^{\bot}}: \ker T^{\bot} \rightarrow \ran T$ unitär
+			\item $T=U|T|$
+		\end{itemize}
+		Insbesondere gilt $U^*U|T|=|T|$, $U^*T=|T|$, $UU^*T=T$. \\
+		Ist $T$ invertierbar, so auch $|T|$ und es gilt $U = T|T|^{-1}$
+		\begin{remark}
+			Man mache sich die Polarzerlegung in $\mathbb{C}$ klar. \\
+			Wäre $T$ normal, so könnte man in den Eigenräumen die Polarzerlegung vornehmen. Im Allg. muss man sich etwas anderes überlegen.
+		\end{remark}
+	\end{theorem}
+	\begin{proof}
+		Für $|T|$ gilt sicherlich für $x \in V$:
+		\begin{equation}
+			\begin{split}
+				||Tx||^2&=  \langle Tx, Tx \rangle = \langle T^*Tx,x \rangle \\
+				&= \langle |T|^2x,x \rangle \\
+				&= || \ |T|x \ ||^2
+			\end{split}
+		\end{equation}
+		insbesondere auch $\ker T = \ker |T|$. \\
+		Ist umgekehrt $S \geq 0$ und $||Sx||=||Tx|| \forall_{x \in V}$, so folgt:
+		\begin{equation}
+			\begin{split}
+				\langle S^2x,x \rangle &= ||Sx||^2 = ||Tx||^2 \\
+				&= \langle T^*Tx,x \rangle
+			\end{split}
+		\end{equation}
+		Da $S^2,T^*T$ selbstadjungiert sind, folgt aus der Polarisierung $S^2=T^*T$, also $S = |T|$(mit Satz 7.9.5). \\
+		Nach der Rang-Defekt-Formel ist 
+		\begin{equation}
+			\begin{split}
+				\dim (\ran T) &= \dim V-\dim (\ker T) = \dim (\ker T^{\bot}) \\
+				&= \dim (\ker |T|^{\bot}) \\
+				&= \dim(\ran |T|)
+			\end{split}
+		\end{equation}
+		Genauer gilt, da $|T|=|T|^*$: 
+		\begin{equation}
+			\ran |T| = \ker |T|^{\bot}
+		\end{equation}
+		Wir setzen für $y = |T|x \in \ran |T|$:
+		\begin{equation}
+			U_0y:=Tx
+		\end{equation}
+		$U_0$ ist wohldefiniert: ist $y = |T|x^{'}$, so ist $x-x^{'} \in \ker |T|=\ker T$, also auch $Tx = Tx^{'}$. \\
+		$U_0$ ist isometrisch:
+		\begin{equation}
+			||U_0y||=||Tx|| = || \ |T|x \ || = ||y||
+		\end{equation}
+		Da $\dim (\ran |T|)=\dim (\ran T)$, ist $U_0$ unitär. \\
+		Man setzt
+		\begin{equation}
+			U|_{\ker T}=0, U|_{\ker T^{\bot}}=U_0
+		\end{equation}
+		Es folgt nun für $x \in V$:
+		\begin{equation}
+			Tx = U_0|T|x=U|T|x
+		\end{equation}
+		also $T = U|T|$ \\		
+		Rest: Übung.
+	\end{proof}
+	\newpage
+	\section{Miscellanea}
+	Es folgen Themen, für die es keine kanonische Einordnung gibt. 
+	\subsection{Quotientenraum}
+	Die Quotientenkonstruktion ist ein Standardverfahren zur Konstruktion neuer Vektorräume, welche nicht in offensichtlicher Weise $\mathbb{K}^n$'s sind. \\
+	Im Folgenden sei V ein $\mathbb{K}$-Vektorraum und $U \subset V$ ein Unterraum. Wir betrachten die Nebenklassen $x+U, x \in V$. \\
+	Etwas formaler sei für $x,y \in V$:
+	\begin{equation}
+		x \sim_{U} y: \Leftrightarrow x-y \in U
+	\end{equation}
+	Man prüft unmittelbar nach, dass $\sim_U$ eine Äquivalenzrelation auf V ist. Die Äquivalenzklasse von $x$ besteht aus:
+	\begin{equation}
+		[x]_{\sim_U} = \{ y \in V | x-y \in U \} = \{ x+u | u \in U \}=x+U
+	\end{equation}
+	\begin{definition}{(Und Satz)}
+		$V/U:=V/\sim_U$ bezeichnet die Menge aller Äquivalenzklassen $mod \ U$. Man nennt $V/U$ den Quotientenraum nach $U$. Mittels der Verknüpfungen
+		\begin{equation}
+			\begin{split}
+				(x+U)+(y+U) &:= (x+y)+U, \ x,y \in V \\
+				\lambda \cdot (x+U) &:= (\lambda x)+U, \ \lambda \in \mathbb{K}, x \in V
+			\end{split}
+		\end{equation}
+		wird $V/U$ zu einem $\mathbb{K}$-Vektorraum. \\
+		Das neutrale Element ist $U = 0 + U$
+	\end{definition}
+	\begin{proof}
+		Die standardmäßigen Details bleiben dem Leser erspart. Wir prüfen nur die Wohldefiniertheit der Verknüpfungen: \\
+		Sind $x-x^{'}, y - y^{'} \in U$, so ist auch $(x+y)-(x^{'}+y^{'}) \in U$, also
+		gilt 
+		\begin{equation}
+			(x+y) + U = (x^{'}+y^{'})+U
+		\end{equation}
+		Analog: Multiplikation
+	\end{proof}
+	\begin{theorem}{(Universelle Eigenschaft des Quotienten)}
+		Sei $V$ ein $\mathbb{K}$-Vektorraum und $U \subset V$. \\
+		Sei $\pi: V \rightarrow V/U, x \mapsto x+U$ die Quotientenabbildung. Dann gilt:
+		\begin{proofenum}
+			\item $\pi$ ist linear
+			\item $\ker \pi = U$, $\pi$ ist surjektiv
+			\item Falls $\dim V < \infty$, so ist $\dim V/U=\dim V-\dim U$
+			\item Ist $V \xrightarrow{f} W$ eine lineare Abbildung mit $U \subset \ker F$, so gibt es genau eine lineare Abbildung $\hat{f}: V/U \rightarrow W$, so dass das folgende Diagramm kommutiert:
+			\begin{center}
+				\begin{tikzcd}
+					V \arrow[d,"\pi", swap] \arrow[r, "f"] & W \\
+					V/U \arrow[ur,"\hat{f}", swap]& \\
+				\end{tikzcd}
+			\end{center}
+			Es gilt $\ker \hat{f}=\ker F/U$
+		\end{proofenum}
+	\end{theorem}
+	\begin{proof}
+		\begin{proofenum}
+			\item klar
+			\item Nach konstruktion ist $\pi$ surjektiv. \\
+				\begin{equation}
+					x \in \ker \pi \Leftrightarrow x+U = U \Leftrightarrow x \in U 
+				\end{equation}
+			\item
+				Folgt aus der Rang-Defekt-Formel:
+				\begin{equation}
+					\begin{split}
+						\dim V/U &= rg \pi \\
+						&= \dim V-\dim (\ker \pi) \\
+						&= \dim V-\dim U
+					\end{split}
+				\end{equation}
+			\item Wir setzen $\hat{f}(x+U):=f(x)$. Ist $x+U = x^{'}+U$, so ist $x-x^{'} \in U$, also $f(x)=f(x^{'})$. Somit ist $\hat{f}$ wohldefiniert. Linearität folgt nun leicht. \\
+			$x+U \in \ker \hat{f} \Leftrightarrow x \in \ker F \Leftrightarrow x+U \in (\ker f)/U$
+			\begin{remark}
+				$(\ker f)/U \subset V/U$ ist ein Unterraum.
+			\end{remark}
+		\end{proofenum}
+	\end{proof}
+	\begin{corollary}{2. Isomorphiesatz}
+		Sei $W$ ein $\mathbb{K}$-Vektorraum und $U \subset V \subset W$ Unterräume. Dann gibt es einen kanonischen isomorphismus
+		\begin{equation}
+			\frac{W/U}{V/U} \xrightarrow{\cong} W/V
+		\end{equation}
+	\end{corollary}
+	\begin{proof}
+		Übung.
+	\end{proof}
+	\subsection{Interne direkte Summe}
+	Im Folgenden sei $V$ ein $\mathbb{K}$-Vektorraum.
+	\begin{definition}{(und Satz)}
+		Sei $(U_i)_{i \in I}$ eine Familie von Unterräumen von $V$. Dann bezeichnet
+		\begin{equation}
+			\sum\limits_{i \in I} U_i = \left\{ x \in V | \exists x_{i_1} \in U_{i_1},...,x_{i_r} \in U_{i_r}: x= x_{i_1}+...+x_{i_r}, r < \infty \right\}
+		\end{equation}
+		$\sum_{i \in I} U_i$ ist ein Unterraum von V. \\
+		Ist $I = \{ 1,...,N \}$ endlich, so schreibt man auch $U_1 \oplus ... \oplus U_N$
+	\end{definition}
+	\begin{proof}
+		Klar
+	\end{proof}
+	\begin{theorem}
+		Für $(U_i)_{i \in I}$ sind äquivalent:
+		\begin{proofenum}
+			\item Jedes $x \in \sum U_i - \{ 0\}$ besitzt genau eine Darstellung $x = x_{i_1}+...+x_{i_r}$ mit eindeutig bestimmten $x_{i_j} \in U_{i_j} - \{ 0 \}$ und paarweise verschiedenen Indizes $i_1,...,i_r \in I$.
+			\item
+				Ist $x_{i_1}+...+x_{i_r}=0$ mit paarweise verschiedenen Indizes $i_1,...,i_r$ und $x_{i_j} \in U_{i_j}$, so ist schon $x_{i_1}=...=x_{i_r}=0$
+			\item
+				Für jedes $j \in I$ gilt:
+				\begin{equation}
+					U_j \cap \sum_{i \in I-\{ j\}}= \{0 \}
+				\end{equation}
+		\end{proofenum}
+		Sind die äquivalenten Bedingungen erfülllt, so schreibt man $\bigoplus U_i$ und nennt es die direkte Summe. \\
+		Ist die Summe direkt und sind $(B_i)_{i \in I}$ Basen von $U_i$, so ist $\bigcup_{i \in I} B_i$ eine Basis von $\bigoplus_{i \in I} U_i$. \\
+		Insbesondere gilt, falls $I, \dim U_i < \infty$:
+		\begin{equation}
+			\dim \bigoplus_{i \in I} U_i = \sum_{i \in I} \dim U_i
+		\end{equation}
+	\end{theorem}
+	\begin{proof}
+		(i)$ \Rightarrow $(ii): \\
+		 klar \\
+		(ii) $\Rightarrow$ (iii): \\
+		Sei
+		\begin{equation}
+			x = x_j=x_{i_1}+...+x_{i_r}
+		\end{equation}
+		mit $j \notin \{ i_1,...,i_r \}$. Dann ist $x_{i_1}+....+x_{i_r}-x_{i_j}=0$ und $(ii) \Rightarrow x_j =0=x_{i_1}=...=x_{i_r}$, also $x=0$. \\
+		(iii)$\Rightarrow$(i); \\
+		Sei 
+		\begin{equation}
+			x = x_{i_1}+...+x_{i_r}= y_{k_1}+....+y_{k_s}
+		\end{equation}
+		mit jeweils paarweise verschiedenen $i_1,...,i_r,k_1,k_s$ und $x_{i_j} \in U_{i_j}-\{ 0\}, y_{k_l} \in U_{k_l}-\{0 \}$. \\
+		Wäre $i_1 \notin \{ k_1,...,k_s \}$, so wäre
+		\begin{equation}
+			\begin{split}
+				U_{i_1} \ni x_{i_1} &= y_{k_1}+...+y_{k_s}-x_{i_2}-...-x_{i_r} \\
+				& \in \sum_{l \neq i_1} U_l
+			\end{split}
+		\end{equation}
+		und somit nach (iii) auch schon $x_{i_1} =0$. \\
+		Widerspruch!\\
+		Seien nun $B_i$ Basen von $U_i$. \\
+		$B_i = \{ x_{ij} | j \in I_i \}$, $I_i$ eine Indexmenge. Ist $\xi = \xi_{i_1}+...+\xi_{i_n}$ mit $\xi_{i_j} \in U_{ij}$, so ist jedes $\xi_{i_j}$ Linearkombination von Elementen aus $B_{ij}$, also ist $\xi$ Linearkombination von Elementen aus $\bigcup_{i \in I} B_i$. \\
+		Sei nun
+		\begin{equation}
+			\sum\limits_{endlich} \lambda_{i_l}x_{i_j}=0
+		\end{equation}
+		Dann ist wegen (ii) für jedes feste $i$ schon $\sum \lambda_{i_l}x_{i_l}=0$. Da aber $B_i$ linear unabhängig ist, folgt schon $\lambda_{i_l}=0, l \in I_i$.
+		Die letzte Aussage ist nun klar.
+	\end{proof}
+	\subsection{(Externe) direkte Summe und direktes Produkt}
+	Im letzten Abschnitt waren die Räume $U_i$ Unterräume eines Raumes $V$, so dass $\bigoplus U_i$ als Unterraum von $V$ konstruiert werden konnte. Abstrakter kann man zu beliebigen Vektorräumen $U_i$ einen Raum $V$ und Einbettungen $U_i \hookrightarrow V$ so konstruieren, dass die direkte Summe $\bigoplus U_i$ gebildet werden kann. Allerdings gibt es für unendliche Indexmengen zwei Varianten. \\
+	Seien $X_i, i \in I$ Vektorräume über $\mathbb{K}$. $I$ ist eine beliebige Indexmenge. Wir erinnern an das allgemeine kartesische Produkt
+	\begin{equation}
+		\prod\limits_{i \in I} X_i
+	\end{equation}
+	Dieses besteht aus allen Familien $(x_i)_{i \in I}$ mit $x_i \in X_i$. \\
+	Etwas formaler sei $X$ irgendeine Menge mit $X_i \subset X$ für alle $i \in I$. Dann ist
+	\begin{equation} 
+		\prod\limits_{i \in I} X_i = \{ f: I \rightarrow X | \forall_{i \in I} f(i) \in X_i \}
+	\end{equation}
+	Wir führen auf $\prod_{i \in I} X_i$ Addition und Skalarmultiplikation ein durch
+	\begin{equation}
+		\begin{split}
+			(f+g)(i) &:= f(i)+g(i), \ i \in I \\
+			(\lambda f)(i) &:= \lambda \cdot f(i), \ i \in I 
+		\end{split}
+	\end{equation}
+	für $f,g \in \prod_{i \in I}X_i, \lambda \in \mathbb{K}$. \\
+	Man prüft unmittelbar nach:
+	\begin{definition}{(Und Satz)}
+		\begin{proofenum}
+			\item 
+				Sei $\prod_{i \in I} X_i$ mit $+, \cdot$ wie oben ein $\mathbb{K}$-Vektorraum. Man nennt es das "direkte Produkt" der Vektorräume $X_i, i \in I$.
+			\item
+				$\bigoplus_{i \in I} X_i :=\{ f \in \prod_{i \in I} X_i | f(i) \neq 0 , \ endlich \ viele \ i \}$ ist ein Unterraum von $\prod\limits_{i \in I}$. Man nennt ihn die "externe direkte Summe"
+		\end{proofenum}
+		\begin{remark}
+			Falls $I$ endlich ist, so ist nach Defintion
+			\begin{equation}
+				\bigoplus_{i \in I} X_i = \prod_{i \in I} X_i
+			\end{equation}
+			Für unendliche $I$ hingegen gibt es sicherlich $f \in \prod_{i \in I} X_i$ mit $f(i) \neq 0$ für unendlich viele i (Auswahlaxiom). \\
+			Ist $I = \{ i_1,...,i_n \}$ endlich, so schreibt man die Elemente von $\bigoplus X_i = \prod X_i$ auch als Tupel $\begin{pmatrix}
+			x_{i_1}& x_{i_2} & \dots & x_{i_n}
+			\end{pmatrix}$ oder Spalten $\begin{pmatrix}
+			x_{i_1} \\
+			x_{i_2} \\
+			\vdots \\
+			x_{i_n}
+			\end{pmatrix}$.
+		\end{remark}
+	\end{definition}
+	\begin{proof}
+		\begin{proofenum}
+			\item Einfache Übung. \\		
+			\item Sind $f,g \in \bigoplus X_i, \lambda \in \mathbb{K}$, so ist $(f+\lambda \cdot g)$ höchstens $\neq 0$, wenn $f(i) \neq 0$ und $g(i) \neq 0$, also höchstens für endlich viele $i$.
+		\end{proofenum}
+	\end{proof}
+	\begin{exercise}
+		Universelle Eigenschaften von $\bigoplus_{i \in I} X_i$, $\prod_{i \in I} X_i$
+	\end{exercise}
+	Wir führen noch natürliche lineare Abbildungen im Zusammenhang mit direkter Summe und Produkt ein: \\
+	für ein festes $\alpha \in I$ seien
+	\begin{equation}
+		\begin{split}
+			\pi_{\alpha}: \prod_{i \in I} X_i &\rightarrow X_{\alpha} \\
+			f &\mapsto f(\alpha) \\
+			\kappa_{\alpha}: X_{\alpha} &\rightarrow \bigoplus_{i \in I} X_i \subset \prod_{i \in I} X_i \\
+			x &\mapsto f_x, \\
+			f_x(i) &= \begin{cases}
+					0, i \neq \alpha \\
+					x, i = \alpha
+			\end{cases}
+		\end{split}
+	\end{equation}
+	Man überlegt sich sich unmittelbar, dass 
+	\begin{proofenum}	
+		\item $\pi_{\alpha} \in \Hom_{\mathbb{K}}(\prod_{i \in I}X_i, X_{\alpha})$ surjektiv ist
+		\item $\kappa_{\alpha} \in \Hom_{\mathbb{K}}(X_{\alpha}, \bigoplus_{i \in I} X_i)$ injektiv ist
+		\item 
+			\begin{equation}
+				\begin{split}
+				\pi_{\alpha} \circ \kappa_{\alpha}(x) &= x, \ x \in X_{\alpha} \\
+				\pi_{\alpha} \circ \kappa_{\beta} &= 0, \ \alpha \neq \beta, \ \alpha, \beta \in I
+				\end{split}
+			\end{equation}
+	\end{proofenum}
+	Schließlich erhalten wir folgende Beziehung zwischen interner und externer direkter Summe:
+	\begin{theorem}
+		Die externe Summe $\bigoplus_{i \in I} X_i$ ist gleich der internen Summe $\bigoplus_{i \in I} \kappa_i X_i$ der Unterräume $\kappa_i X_i$.
+	\end{theorem}
+	\begin{proof}
+		$\kappa_i$ ist injektiv, folglich ist $\kappa_i: X_i \rightarrow \kappa_i(X_i)$ ein kanonischer Isomorphismus auf den Unterraum
+		\begin{equation}
+			\kappa_i(X_i) = \left\{ f \in \bigoplus_{i \in I} X_i \left| f(j)=0, j \neq i \right. \right\}
+		\end{equation}
+		wir zeigen, dass die Familie $\kappa_i(X_i)$ die Bedingung (iii) des Satzes 8.2.2 erfüllt: \\
+		Sei $j \in I$ und
+		\begin{equation}
+			f \in \kappa_j(X_j) \cap \sum_{i \in I-\{ j \}} \kappa_i(X_i)
+		\end{equation}
+		Dann ist einerseits $f(i) =0$ für $i \neq j$, andererseits $f = \sum_{ endl} \kappa_i(X_i)$ mit endlich vielen $x_i \in X_i, i \neq j$, also auch $f(j) = \sum (\kappa_i(X_i))(j)=0$, somit $f=0$. Ist nun $f \in ext - \bigoplus_{i \in I} X_i$, so ist nach Def. $f(i) \neq 0$ für höchstens endlich viele $i \in I$, etwa $i_1,...,i_n$. Also
+		\begin{equation}
+			f = \sum_{\alpha =1}^n \kappa_{i_{\alpha}}(f(\iota_{\alpha})) \in int- \bigoplus_{i \in I} \kappa_i(X_{i})
+		\end{equation}
+		andererseits ist ein Vektor
+		\begin{equation}
+			x = \sum_{\alpha =1}^n \kappa_{i_{\alpha}} (x_{\iota_{\alpha}}) \in int-\bigoplus_{i \in I} X_i
+		\end{equation}
+		sicherlich in $ext-\bigoplus_{i \in I}X_i$, denn
+		\begin{equation}
+			x(i) =0, i \notin \{ i_1,...,i_n \}
+		\end{equation}
+	\end{proof}
+	\subsection{Der Dualraum}
+	\begin{definition}
+		Sei $V$ ein $\mathbb{K}$-Vektorraum. Dann heißt
+		\begin{equation}
+			V^* := \Hom_{\mathbb{K}}(V, \mathbb{K})
+		\end{equation}
+		der Dualraum von $V$. \\
+		Wir führen noch folgende Notation ein: \\
+		Für $\varphi \in V^*, x \in V$ schreiben wir auch $\langle x, \varphi \rangle$ statt $\varphi(x)$.\\
+		Die Notation erinnert an das Skalarprodukt und das ist durchaus gewollt. Für Formalisten: $\langle x, \varphi \rangle_{V,V^*}$
+	\end{definition}
+	\begin{theorem}
+		Sei $V$ ein $ \mathbb{K}$-Vektorraum.
+		\begin{proofenum}
+			\item 
+				Zu $x \in V-\{ 0 \}$ und $\lambda \in \mathbb{K}$ gibt es ein $\varphi \in V^*$ mit $\langle x, \varphi \rangle = \lambda$. Insbesondere ist $x \in V$ schon dann $0$, wenn $\langle x, \varphi \rangle=0$ für alle $\varphi \in V^*$
+			\item 
+				Ist $\dim(V) < \infty$ und $B = \{ e_1,...,e_n \}$ eine Basis von $V$, so ist durch
+				\begin{equation}
+					\langle e_i, e_j^* \rangle = \delta_{ij}
+				\end{equation}
+				eine Basis $B^* = \{ e_1^*,...,e_n^* \}$ von $V$ bestimmt. Man nennt $B^*$ die zu $B$ duale Basis.
+		\end{proofenum}
+	\end{theorem}
+	\begin{proof}
+		\begin{proofenum}
+			\item
+				Wir benötigen hierzu den allgemeinen Existenzsatz für Basen. Sei also $(e_i)_{i \in I}$ eine Basis von $V$ mit $e_{i_0}=x$. Dann besitzt jedes $y \in V$ eine eindeutige Darstellung
+				\begin{equation}
+					y = \sum_{endl} \alpha_i \cdot e_i
+				\end{equation}
+				Setze
+				\begin{equation}
+					\varphi(y):= \lambda \cdot a_{i_0}
+				\end{equation}
+				Dann besitzt $\varphi$ die gewünschte Eigenschaft.
+			\item
+				Lineare Abbildungen können auf Basen beliebig vorgegeben werden und dies legt sie auch fest, also ist $e_j^*$ durch (8.4.2) wohldefiniert. \\
+				Ist $\varphi \in V^*$, so folgt für $x = \sum_{i=1}^n \lambda_i e_i$
+				\begin{equation}
+					\begin{split}
+						\langle x, \varphi \rangle &= \sum_{i=0}^n \lambda_i \varphi(e_j) \\
+						&= \sum_{i =1}^n \sum_{j=1}^n \lambda_i \varphi(e_j) \langle e_i, e_j^* \rangle \\
+						&= \left\langle \sum_{i =1}^n \lambda_i e_i, \sum_{j =1}^n \varphi(e_j) e_j^* \right\rangle
+					\end{split}
+				\end{equation}
+				Also folgt $\varphi = \sum_{j =1}^n \varphi(e_j) e_j^*$. Aus (8.4.2) folgt aber auch die lineare Unabhängigkeit von $B^*$.
+		\end{proofenum}
+	\end{proof}
+	Für $\dim V < \infty$ ist also $V$ isomorph zu $V^*$. Man beachte, dass die Wahl eines Isomorphismus von der Wahl einer Basis abhängt. Es gibt keinen kanonischen Isomorphismus $V \rightarrow V^*$. \\
+	Weiterhin wird für $\dim V = \infty$ das System $B^*$ zwar linear unabhängig sein, es wird $V^*$ jedoch nicht aufspannen. Genauer gilt:
+	\begin{theorem}
+		Sei $V$ ein $\mathbb{K}$-Vektorraum. Dann ist
+		\begin{equation}
+			\begin{split}
+				\kappa: V &\rightarrow V^{**} \\
+				\langle \varphi, \kappa(x) \rangle_{V^*,V^{**}} &:= \langle x, \varphi \rangle_{V, V^*}
+			\end{split}
+		\end{equation}
+		eine (kanonische) injektive lineare Abbildung von $V$ in den Bidualraum $V^{**}:= (V^*)^*$. \\
+		$\kappa$ ist genau dann ein Isomorphismus, wenn $\dim V < \infty$.
+	\end{theorem}
+	\begin{proof}
+		Für jedes $x \in V$ ist sicherlich $V^* \ni \varphi \mapsto \langle x, \varphi \rangle$ eine Linearform (lineare Abbildung nach $\mathbb{K}$) auf $V^*$. Weiterhin ist für $x, y \in V, \lambda \in \mathbb{K}$
+		\begin{equation}
+			\begin{split}
+				\langle \varphi, \kappa(\lambda x+y ) \rangle &= \langle \lambda x + y, \varphi \rangle =... \\
+				&= \langle \varphi, \lambda \kappa(x) + \kappa(y) \rangle
+			\end{split}
+		\end{equation}
+		also $\kappa \in \Hom_{\mathbb{K}}(V, V^{**})$. \\
+		Ist $\kappa(x)=0$, so folgt $\langle x, \varphi \rangle =0$ für alle $\varphi \in V^*$ und Satz 8.4.2 impliziert $x=0$, also ist $\kappa$ injektiv.
+	\end{proof}
+	\begin{remark}
+		Der Dualraum des $\mathbb{K}^n$ besitzt eine natürliche Beschreibung als Zeilenvektoren: wie üblich sei
+		\begin{equation}	
+			\mathbb{K}^n = \left\{  \begin{pmatrix}
+				x_1 \\
+				\vdots \\
+				x_n
+\end{pmatrix} | x_j \in \mathbb{K}	 \right\} = \mathcal{M}(n \times 1, \mathbb{K})
+		\end{equation}
+		die Menge der Spaltenvektore, bzw. der $n \times 1$-Matrizen mit der kanonischen Basis $e_j = \begin{pmatrix}
+			0 \\
+			\vdots \\
+			1 \\
+			0 \\
+			\vdots \\
+			0
+		\end{pmatrix}$.\\
+		 Betrachte $\varphi \in (\mathbb{K}^n)^*$. Dann ist für $x = \begin{pmatrix}
+		 	x_1 \\
+		 	\vdots \\
+		 	x_n
+		 \end{pmatrix} \in \mathbb{K}^n$
+		 \begin{equation}
+		 	\varphi(x) = \sum_{j = 1}^n x_j \varphi(e_j)= \begin{pmatrix}
+		 		\varphi(e_1), \dots, \varphi(e_n)
+		 	\end{pmatrix} \cdot \begin{pmatrix}
+		 		x_1 \\
+		 		\vdots \\
+		 		x_n
+		 	\end{pmatrix}
+		 \end{equation}
+		 Dabei haben wir stillschweigend die $1 \times 1$-Matrix ganz rechts mit ihrem Eintrag identifiziert; Puristen hätten auch die beiden linken Terme zusätzlich noch in Klammern setzen können. \\
+		 \textbf{Fazit}: Der Dualraum des $\mathbb{K}^n$ ist in natürlicher Weise isomorph zum Raum $\mathcal{M}(1 \times n, \mathbb{K})$ der Zeilenvektoren.
+	\end{remark}
+	\begin{exercise}
+		Hieraus erhält man einen weiteren abstrakten Beweis der Gleichheit von Zeilenrang und Spaltenrang einer Matrix. (vgl. Fischer Kap. 6)
+	\end{exercise} 
+	\textbf{Der Dualraum eines Vektorraums mit Skalarprodukt} \\
+	Die Dualitätstheorie nimmt eine neue Wendung, falls $K = \mathbb{K} \in \{ \mathbb{R}, \mathbb{C} \}$ und $V$ mit einem Skalarprodukt versehbar ist.
+	\begin{theorem}{\textbf{(und Definition)}}
+		Sei $V$ ein Vektorraum mit Skalarprodukt. Dann ist 
+		\begin{equation}
+			\begin{split}
+				b : V &\rightarrow V^* \\
+				x &\mapsto \langle x, - \rangle
+			\end{split} 
+		\end{equation}
+		eine injektive (anti)lineare Abbildung. D.h. falls $\mathbb{K}=\mathbb{R}$,so ist $b$ linear, falls $\mathbb{K}=\mathbb{C}$, so ist $b$ antilinear. \\
+		Ist $\dim V < \infty$, so ist $b$ sogar ein Isomorphismus, d.h endlich-dimensionale Vektorräume mit Skalarprodukt sind \textbf{kanonisch} antiisomorph zu ihrem Dualraum.
+	\end{theorem}
+	\begin{remark}
+		\begin{enumerate}
+			\item 	
+				Wir wissen schon, dass Vektorräume gleicher endlicher Dimension stets abstrakt isomorph sind. Deshalb ist es wesentlich, dass im obigen Satz die Abbildung natürlich (kanonisch) gegeben ist.
+			\item 	
+				Die letzte Aussage des Satzes nennt man auch den Darstellungssatz von Riesz.
+		\end{enumerate}
+	\end{remark}
+	\begin{proof}
+		Das Skalarprodukt ist linear im 2. Argument. Deshalb ist $x^b = \langle x,-\rangle$ für $x \in V$ eine Linearform auf $V$. Die Antilinearität der Zuordnung $x \mapsto x^b$ folgt aus der Antilinearität des Skalarprodukts im 1. Argument. \\
+		Zum Beweis der Injektivität von $b$ sei $x^b = 0$. Dann ist also insbesondere $0 = x^b(x) = \langle x,x \rangle = ||x||^2$, also $x = 0$. Schließlich sei $\dim V < \infty$ und $\{ e_1,...,e_n \}$ eine Orthonormalbasis von $V$. Dann gilt für $\{ e_1^b,...,e_n^b \}$ aber
+		\begin{equation}
+			e_i^b(e_j) = \langle e_i, e_j \rangle = \delta_{ij}
+		\end{equation}
+		also folgt aus Satz 4.2.2, dass $\{ e_1^b,...,e_n^b \}$ die zu $\{ e_1,...,e_n \}$ duale Basis von $V^*$ ist. Insbesondere ist $b$ surjektiv.
+	\end{proof}
+	\textbf{Der Antiraum eines $\mathbb{C}$-Vektorraums} \\
+	Die komplex antilinearen Abbildung verlieren ihre Sonderrolle, wenn man stattdessen einen $\mathbb{C}$-Vektorraum $V$ seinen Antiraum $\bar{V}$ an die Seite stellt. Dies stellt in gewisser Weise die Abstraktion der komponentenweisen Konjugation von Spaltenvektoren dar. \\
+	Als additive abelsche Gruppe sei $\bar{V} = V$. Allerdings setzen wir für $\lambda \in \mathbb{C}, x \in V: \lambda \bar{\cdot} x = \bar{\lambda} \cdot x$. Für den Moment dient die Notation $\bar{\cdot}$ der Unterscheidung der beiden skalaren Multiplikationen. Man überprüft unmittelbar, dass $(\bar{V}, +, \bar{\cdot})$ ein $\mathbb{C}$-Vektorraum ist. Weiterhin ist $\langle x,y \rangle_{\bar{V}}:= \langle y,x \rangle_V$(Reihenfolge!) ein Skalarprodukt auf $\bar{V}$. \\
+	Schließlich ist $id : V \rightarrow \bar{V}$ ein kanonischer antilinearer Isomorphismus. Das Wort "kanonisch" ist hier wesentlich, denn falls $\dim V < \infty$, so sind $V, \bar{V}$ auch (nicht-kanonisch) $\mathbb{C}$-isomorph. \\
+	Nach dieser Vorrede können wir die Abbildung $b$ für einen Vektorraum mit Skalarprodukt nochmals betrachten: \\
+	betrachtet man sie auf $\bar{V}$, so erhält man eine lineare Abbildung
+	\begin{center}
+		\begin{tikzcd}
+			\bar{V} \arrow[rr, "\bar{\cdot}"  "antilinear"] \arrow[rrrr, bend right, "linear"]  &  & V \arrow[rr, "b" "antilinear"] & & V^* \\
+			\bar{x} \arrow[rr, mapsto] & & x \arrow[rr, mapsto] & &x^b
+		\end{tikzcd}
+	\end{center}
+	Das heißt, falls $\dim V < \infty$, so ist $\bar{V}$ kanonisch isomorph zu $V^*$. Alternativ ist die Abbildung $x \mapsto \langle -,x \rangle$ ein Isomorphismus von $V$ auf $\bar{V}^* = \bar{V^*}$
+	\subsection{Duale Abbildungen}
+	Schon bei der Diskussion der Vektorräume mit Skalarprodukt tauchte die Frage auf, ob sich der Begriff der adjungierten Abbildung nicht auf allgemeine Räume ausdehnen lässt. In der Tat ist dies in gewisser Weise möglich. Dies und den Zusammenhang mit Vektorräumen mit Skalarprodukt wollen wir hier diskutieren. \\
+	\begin{theorem}{\textbf{(und Definition)}}
+		Seien $V,W$ $\mathbb{K}$-Vektorräume und sei $T \in \Hom_{\mathbb{K}}(V,W)$. Dann erklärt man $T^* \in \Hom_{\mathbb{K}}(W^*,V^*)$ durch
+		\begin{equation}
+			\langle V, T^* \varphi \rangle_{V, V^*} := \langle Tv, \varphi \rangle_{W, W^*}
+		\end{equation}
+		Man nennt $T^*$ auch die zu $T$ duale Abbildung. Die Zuordnung $Ad: \Hom_{\mathbb{K}}(V,W) \rightarrow \Hom_{\mathbb{K}}(W^*,V^*)$ ist linear.
+	\end{theorem}
+	\begin{proof}
+		$T^*$ ist durch (8.5.1) wohldefiniert. Die Linearität von $T^*$ ebenso wie die von $Ad$ ergeben sich ebenfalls aus (8.5.1).
+	\end{proof}
+	Analog zum orthogonalen Komplement setzt man für $U \subset V$ den $U$-Annulator
+	\begin{equation}
+		U^o := \{ \varphi \in V^* | \forall_{x \in U} \langle x, \varphi \rangle = 0 \}
+	\end{equation}
+	Entsprechend gilt:
+	\begin{theorem}
+		Sei $T \in \Hom_{\mathbb{K}}(V, W)$ und $T^* \in \Hom_{\mathbb{K}}(W^*,V^*)$ die duale Abbildung. Dann gelten
+		\begin{proofenum}
+			\item 	
+				$\ker T^* = (\Img T)^o$, $\ker T = (\Img T)^o \cap V$
+			\item 
+				$T^*$ injektiv $\Leftrightarrow$ $T$ surjektiv
+			\item 
+				$T^*$ surjektiv $\Leftrightarrow$ $T$ injektiv
+			\item 
+				Ist $\dim V < \infty$ oder $\dim W < \infty$, so ist $rg T^* = rg T$
+		\end{proofenum}
+	\end{theorem}
+	\begin{proof}
+		\begin{proofenum}
+			\item 	
+				\begin{equation}
+					\begin{split}
+						\varphi \in \ker T^* & \Leftrightarrow \forall_{x \in V} \langle x, T^* \varphi \rangle = 0 \\
+						& \Leftrightarrow \forall_{x \in V} \langle Tx, \varphi \rangle = 0 \\
+						& \Leftrightarrow \varphi \in T(V)^o
+					\end{split}
+				\end{equation}
+				Analog gilt
+				\begin{equation}
+					\begin{split}
+						x \in \ker T^* &\Leftrightarrow \forall_{\varphi \in V^*} \langle Tx, \varphi \rangle = 0 \\
+						&\Leftrightarrow \forall_{\varphi \in V^*} \langle x, T^* \varphi \rangle = 0 \\
+						&\Leftrightarrow x \in (T^* \varphi)^o \cap V
+					\end{split}
+				\end{equation}
+				Beachte, dass $(T^* \varphi)^o \subset V^{**}$ und nach Satz 8.4.3 $V \subset V^**$
+			\item 
+				$T^*$ injektiv $\Leftrightarrow$ $\left( \forall_x \langle x, T^* \varphi \rangle = 0 \Rightarrow \varphi = 0 \right)$ $\Leftrightarrow$ $\left( \forall_x \langle Tx, \varphi \rangle = 0 \Rightarrow \varphi = 0 \right)$. \\
+				Ist $T$ surjektiv, so ist die letzte Bedingung sicher erfüllt. Ist hingegen $T$ nicht surjektiv, so ist $W/T(V) \neq 0$. Wähle $\bar{\varphi} \in (W/T(V))^* -  \{ 0 \}$. Dann ist
+				\begin{center}
+					\begin{tikzcd}
+						W \arrow[dr, bend left, "\varphi"] \arrow[d] & \\
+						W/T(V) \arrow[r, "\bar{\varphi}"] & \mathbb{K}
+					\end{tikzcd}
+				\end{center}
+		\end{proofenum}
 	\end{proof}
 \end{document}
