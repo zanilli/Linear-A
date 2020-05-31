@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.3)  1 JUN 2020 00:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.3)  1 JUN 2020 01:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -116,16 +116,16 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
+))
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
 \thm@style=\toks21
@@ -138,379 +138,14 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headsep=\skip48
 \dth@everypar=\toks26
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
-Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
-\symrsfs=\mathgroup6
-)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks27
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen113
-\Gin@req@width=\dimen114
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/lm/lmodern.sty
-Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fourier.sty
-Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
-Now handling font encoding FML ...
-... no UTF-8 mapping file for font encoding FML
-Now handling font encoding FMS ...
-... no UTF-8 mapping file for font encoding FMS
-Now handling font encoding FMX ...
-... no UTF-8 mapping file for font encoding FMX
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
-Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
-Package textcomp Info: Sub-encoding information:
-(textcomp)               5 = only ISO-Adobe without \textcurrency
-(textcomp)               4 = 5 + \texteuro
-(textcomp)               3 = 4 + \textohm
-(textcomp)               2 = 3 + \textestimated + \textcurrency
-(textcomp)               1 = TS1 - \textcircled - \t
-(textcomp)               0 = TS1 (full)
-(textcomp)             Font families with sub-encoding setting implement
-(textcomp)             only a restricted character set as indicated.
-(textcomp)             Family '?' is the default used for unknown fonts.
-(textcomp)             See the documentation for details.
-Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
-File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-Now handling font encoding TS1 ...
-... processing UTF-8 mapping file for font encoding TS1
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
-File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
-   defining Unicode char U+00A2 (decimal 162)
-   defining Unicode char U+00A3 (decimal 163)
-   defining Unicode char U+00A4 (decimal 164)
-   defining Unicode char U+00A5 (decimal 165)
-   defining Unicode char U+00A6 (decimal 166)
-   defining Unicode char U+00A7 (decimal 167)
-   defining Unicode char U+00A8 (decimal 168)
-   defining Unicode char U+00A9 (decimal 169)
-   defining Unicode char U+00AA (decimal 170)
-   defining Unicode char U+00AC (decimal 172)
-   defining Unicode char U+00AE (decimal 174)
-   defining Unicode char U+00AF (decimal 175)
-   defining Unicode char U+00B0 (decimal 176)
-   defining Unicode char U+00B1 (decimal 177)
-   defining Unicode char U+00B2 (decimal 178)
-   defining Unicode char U+00B3 (decimal 179)
-   defining Unicode char U+00B4 (decimal 180)
-   defining Unicode char U+00B5 (decimal 181)
-   defining Unicode char U+00B6 (decimal 182)
-   defining Unicode char U+00B7 (decimal 183)
-   defining Unicode char U+00B9 (decimal 185)
-   defining Unicode char U+00BA (decimal 186)
-   defining Unicode char U+00BC (decimal 188)
-   defining Unicode char U+00BD (decimal 189)
-   defining Unicode char U+00BE (decimal 190)
-   defining Unicode char U+00D7 (decimal 215)
-   defining Unicode char U+00F7 (decimal 247)
-   defining Unicode char U+0192 (decimal 402)
-   defining Unicode char U+02C7 (decimal 711)
-   defining Unicode char U+02D8 (decimal 728)
-   defining Unicode char U+02DD (decimal 733)
-   defining Unicode char U+0E3F (decimal 3647)
-   defining Unicode char U+2016 (decimal 8214)
-   defining Unicode char U+2020 (decimal 8224)
-   defining Unicode char U+2021 (decimal 8225)
-   defining Unicode char U+2022 (decimal 8226)
-   defining Unicode char U+2030 (decimal 8240)
-   defining Unicode char U+2031 (decimal 8241)
-   defining Unicode char U+203B (decimal 8251)
-   defining Unicode char U+203D (decimal 8253)
-   defining Unicode char U+2044 (decimal 8260)
-   defining Unicode char U+204E (decimal 8270)
-   defining Unicode char U+2052 (decimal 8274)
-   defining Unicode char U+20A1 (decimal 8353)
-   defining Unicode char U+20A4 (decimal 8356)
-   defining Unicode char U+20A6 (decimal 8358)
-   defining Unicode char U+20A9 (decimal 8361)
-   defining Unicode char U+20AB (decimal 8363)
-   defining Unicode char U+20AC (decimal 8364)
-   defining Unicode char U+20B1 (decimal 8369)
-   defining Unicode char U+2103 (decimal 8451)
-   defining Unicode char U+2116 (decimal 8470)
-   defining Unicode char U+2117 (decimal 8471)
-   defining Unicode char U+211E (decimal 8478)
-   defining Unicode char U+2120 (decimal 8480)
-   defining Unicode char U+2122 (decimal 8482)
-   defining Unicode char U+2126 (decimal 8486)
-   defining Unicode char U+2127 (decimal 8487)
-   defining Unicode char U+212E (decimal 8494)
-   defining Unicode char U+2190 (decimal 8592)
-   defining Unicode char U+2191 (decimal 8593)
-   defining Unicode char U+2192 (decimal 8594)
-   defining Unicode char U+2193 (decimal 8595)
-   defining Unicode char U+2329 (decimal 9001)
-   defining Unicode char U+232A (decimal 9002)
-   defining Unicode char U+2422 (decimal 9250)
-   defining Unicode char U+25E6 (decimal 9702)
-   defining Unicode char U+25EF (decimal 9711)
-   defining Unicode char U+266A (decimal 9834)
-   defining Unicode char U+FEFF (decimal 65279)
-))
-LaTeX Info: Redefining \oldstylenums on input line 334.
-Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
-Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
-Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
-Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
-Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
-Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
-Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
-Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
-Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
-Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
-Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
-Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
-Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
-Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
-Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
-Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
-Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
-Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
-Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
-Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
-Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
-Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
-Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
-Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
-
-Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
-Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
-Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
-Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
-Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
-Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
-Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
-Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
-Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
-Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
-Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
-Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
-Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
-Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
-Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
-Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
-Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
-Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
-Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
-Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
-Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
-Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
-Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
-Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
-Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
-Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
-Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
-Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
-Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
-Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
-Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
-Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
-Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
-Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
-Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
-Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
-Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fourier-orns.sty
-Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
-)
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
-LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `normal' on input line 50.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> T1/futs/m/n on input line 50.
-LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `operators' in the math version `bold' on input line 50.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/futs/m/n on input line 50.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  T1/futs/m/n --> T1/futs/b/n on input line 51.
-LaTeX Font Info:    Redeclaring symbol font `letters' on input line 59.
-LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
-(Font)              `letters' in the math version `normal' on input line 59.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/lmm/m/it --> FML/futmi/m/it on input line 59.
-LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
-(Font)              `letters' in the math version `bold' on input line 59.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/lmm/b/it --> FML/futmi/m/it on input line 59.
-\symotherletters=\mathgroup7
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  FML/futmi/m/it --> FML/futmi/b/it on input line 61.
-LaTeX Font Info:    Overwriting symbol font `otherletters' in version `bold'
-(Font)                  FML/futm/m/it --> FML/futm/b/it on input line 62.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 63.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 64.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 65.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 66.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 67.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 68.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 69.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 70.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 71.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 72.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 73.
-LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 113.
-LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 113.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/lmsy/m/n --> FMS/futm/m/n on input line 113.
-LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 113.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/lmsy/b/n --> FMS/futm/m/n on input line 113.
-LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 114.
-LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 1
-14.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/lmex/m/n --> FMX/futm/m/n on input line 114.
-LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 114
-.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/lmex/m/n --> FMX/futm/m/n on input line 114.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 115.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> T1/futs/bx/n on input line 115.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> T1/futs/bx/n on input line 115.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 116.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 117.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/futs/m/it on input line 117.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/futs/m/it on input line 117.
-LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 118.
-LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 119.
-LaTeX Font Info:    Redeclaring math symbol \leqslant on input line 125.
-LaTeX Font Info:    Redeclaring math symbol \geqslant on input line 126.
-LaTeX Font Info:    Redeclaring math symbol \vDash on input line 129.
-LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 13
-0.
-LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 1
-31.
-LaTeX Font Info:    Redeclaring math symbol \nleqslant on input line 132.
-LaTeX Font Info:    Redeclaring math symbol \ngeqslant on input line 133.
-LaTeX Font Info:    Redeclaring math symbol \parallel on input line 134.
-LaTeX Font Info:    Redeclaring math symbol \nparallel on input line 135.
-LaTeX Font Info:    Redeclaring math symbol \nvDash on input line 137.
-LaTeX Font Info:    Redeclaring math symbol \intercal on input line 138.
-LaTeX Font Info:    Redeclaring math symbol \hslash on input line 139.
-LaTeX Font Info:    Redeclaring math symbol \nexists on input line 140.
-LaTeX Font Info:    Redeclaring math symbol \complement on input line 141.
-LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 142.
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 148.
-LaTeX Font Info:    Redeclaring math symbol \smallsetminus on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 150.
-LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 151
-.
-LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 152.
-LaTeX Font Info:    Redeclaring math symbol \square on input line 153.
-LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 155.
-
-LaTeX Font Info:    Redeclaring math symbol \blacksquare on input line 156.
-LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 186.
-LaTeX Font Info:    Redeclaring math symbol \varvarrho on input line 187.
-LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 210.
-LaTeX Font Info:    Redeclaring math delimiter \vert on input line 215.
-LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 217.
-LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 219.
-LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 221.
-LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 223.
-LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 225.
-LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 227.
-LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 229.
-LaTeX Font Info:    Redeclaring math delimiter \langle on input line 231.
-LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 233.
-LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 235.
-LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 237.
-LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 239.
-LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 241.
-LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 243.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 247.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 248.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 249.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 250.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 251.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 252.
-LaTeX Font Info:    Redeclaring math accent \check on input line 253.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 254.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
-\symUfutm=\mathgroup8
-)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/02/04 v3.8 Customized lists
+\enitkv@toks@=\toks27
 \labelindent=\skip49
-\enit@outerparindent=\dimen115
+\enit@outerparindent=\dimen113
 \enit@toks=\toks28
 \enit@inbox=\box29
 \enit@count@id=\count102
@@ -531,8 +166,8 @@ Package: tikz-cd 2018/11/19 v0.9f Commutative diagrams with TikZ
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks29
-\pgfutil@tempdima=\dimen116
-\pgfutil@tempdimb=\dimen117
+\pgfutil@tempdima=\dimen114
+\pgfutil@tempdimb=\dimen115
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
@@ -548,16 +183,40 @@ Package: pgfrcs 2019/04/04 v3.1.2 (3.1.2)
 Package: pgf 2019/04/04 v3.1.2 (3.1.2)
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks30
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2019/04/04 v3.1.2 (3.1.2)
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks30
-\pgfkeys@temptoks=\toks31
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
-\pgfkeys@tmptoks=\toks32
+\pgfkeys@tmptoks=\toks33
 ))
 \pgf@x=\dimen118
 \pgf@y=\dimen119
@@ -573,9 +232,9 @@ ode.tex
 \c@pgf@countb=\count105
 \c@pgf@countc=\count106
 \c@pgf@countd=\count107
-\t@pgf@toka=\toks33
-\t@pgf@tokb=\toks34
-\t@pgf@tokc=\toks35
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
 \pgf@sys@id@count=\count108
 
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
@@ -626,9 +285,9 @@ Package: pgfcore 2019/04/04 v3.1.2 (3.1.2)
 \pgfmath@dimen=\dimen126
 \pgfmath@count=\count111
 \pgfmath@box=\box31
-\pgfmath@toks=\toks36
-\pgfmath@stack@operand=\toks37
-\pgfmath@stack@operation=\toks38
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
 )
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -780,8 +439,8 @@ Package: pgffor 2019/04/04 v3.1.2 (3.1.2)
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen153
 \pgffor@skip=\dimen154
-\pgffor@stack=\toks39
-\pgffor@toks=\toks40
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
 ))
 (/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -838,57 +497,24 @@ File: pgflibraryarrows.meta.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgfarrowwidth=\dimen164
 \pgfarrowlinewidth=\dimen165
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count125
-\calc@Bcount=\count126
-\calc@Adimen=\dimen166
-\calc@Bdimen=\dimen167
-\calc@Askip=\skip53
-\calc@Bskip=\skip54
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count127
-\calc@Cskip=\skip55
-)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/mathtools/mhsetup.sty
-Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
-)
-LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count128
-\l_MT_multwidth_dim=\dimen168
-\origjot=\skip56
-\l_MT_shortvdotswithinadjustabove_dim=\dimen169
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen170
-\l_MT_above_intertext_sep=\dimen171
-\l_MT_below_intertext_sep=\dimen172
-\l_MT_above_shortintertext_sep=\dimen173
-\l_MT_below_shortintertext_sep=\dimen174
-)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/eqparbox/eqparbox.sty
 Package: eqparbox 2017/09/03 v4.1 Create equal-widthed boxes
-\eqp@tempdima=\skip57
-\eqp@tempdimb=\skip58
+\eqp@tempdima=\skip53
+\eqp@tempdimb=\skip54
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
-\col@sep=\dimen175
+\col@sep=\dimen166
 \ar@mcellbox=\box41
-\extrarowheight=\dimen176
-\NC@list=\toks41
-\extratabsurround=\skip59
-\backup@length=\skip60
+\extrarowheight=\dimen167
+\NC@list=\toks42
+\extratabsurround=\skip55
+\backup@length=\skip56
 \ar@cellbox=\box42
 )
 \eqp@tabular@box=\box43
 \eqp@list@box=\box44
-\eqp@list@indent=\skip61
+\eqp@list@indent=\skip57
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
@@ -904,11 +530,82 @@ File: tikzlibrarybabel.code.tex 2019/04/04 v3.1.2 (3.1.2)
 s/tikzlibraryangles.code.tex
 File: tikzlibraryangles.code.tex 2019/04/04 v3.1.2 (3.1.2)
 )
-\c@theorem=\count129
-\c@claim=\count130
-\c@proofenumi=\count131
-\enitdp@proofenum=\count132
+\c@theorem=\count125
+\c@claim=\count126
+\c@proofenumi=\count127
+\enitdp@proofenum=\count128
 
+(/usr/local/texlive/2019/texmf-dist/tex/latex/cmbright/cmbright.sty
+Package: cmbright 2005/04/13 v8.1 (WaS)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/cmbr/m/n on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmbr/m/n on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/cmbrm/m/it on input line 30.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/cmbrm/m/it on input line 30.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmbrm/m/it --> OML/cmbrm/b/it on input line 31.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 32.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/cmbrs/m/n on input line 32.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/cmbrs/m/n on input line 32.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/cmbr/m/sl on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/cmbr/m/sl on input line 33.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/cmbr/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/cmbr/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtl/m/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/cmtl/m/n on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \alpha on input line 37.
+LaTeX Font Info:    Redeclaring math symbol \beta on input line 38.
+LaTeX Font Info:    Redeclaring math symbol \gamma on input line 39.
+LaTeX Font Info:    Redeclaring math symbol \delta on input line 40.
+LaTeX Font Info:    Redeclaring math symbol \epsilon on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \zeta on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \eta on input line 43.
+LaTeX Font Info:    Redeclaring math symbol \theta on input line 44.
+LaTeX Font Info:    Redeclaring math symbol \iota on input line 45.
+LaTeX Font Info:    Redeclaring math symbol \kappa on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \lambda on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \mu on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \nu on input line 49.
+LaTeX Font Info:    Redeclaring math symbol \xi on input line 50.
+LaTeX Font Info:    Redeclaring math symbol \pi on input line 51.
+LaTeX Font Info:    Redeclaring math symbol \rho on input line 52.
+LaTeX Font Info:    Redeclaring math symbol \sigma on input line 53.
+LaTeX Font Info:    Redeclaring math symbol \tau on input line 54.
+LaTeX Font Info:    Redeclaring math symbol \upsilon on input line 55.
+LaTeX Font Info:    Redeclaring math symbol \phi on input line 56.
+LaTeX Font Info:    Redeclaring math symbol \chi on input line 57.
+LaTeX Font Info:    Redeclaring math symbol \psi on input line 58.
+LaTeX Font Info:    Redeclaring math symbol \omega on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \varepsilon on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \vartheta on input line 61.
+LaTeX Font Info:    Redeclaring math symbol \varpi on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \varrho on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \varsigma on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \varphi on input line 65.
+LaTeX Info: Redefining \LaTeX on input line 129.
+LaTeX Info: Redefining \LaTeXe on input line 139.
+LaTeX Font Info:    Try loading font information for T1+cmbr on input line 144.
+
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/cmbright/t1cmbr.fd
+File: t1cmbr.fd 2005/04/13 v8.1 (WaS)
+))
 (/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
@@ -922,83 +619,48 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count133
-\Gm@cntv=\count134
-\c@Gm@tempcnt=\count135
-\Gm@bindingoffset=\dimen177
-\Gm@wd@mp=\dimen178
-\Gm@odd@mp=\dimen179
-\Gm@even@mp=\dimen180
-\Gm@layoutwidth=\dimen181
-\Gm@layoutheight=\dimen182
-\Gm@layouthoffset=\dimen183
-\Gm@layoutvoffset=\dimen184
-\Gm@dimlist=\toks42
+\Gm@cnth=\count129
+\Gm@cntv=\count130
+\c@Gm@tempcnt=\count131
+\Gm@bindingoffset=\dimen168
+\Gm@wd@mp=\dimen169
+\Gm@odd@mp=\dimen170
+\Gm@even@mp=\dimen171
+\Gm@layoutwidth=\dimen172
+\Gm@layoutheight=\dimen173
+\Gm@layouthoffset=\dimen174
+\Gm@layoutvoffset=\dimen175
+\Gm@dimlist=\toks43
 )
 (./LA_2_Skript.aux)
 \openout1 = `LA_2_Skript.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 63.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 63.
-
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fmlfutm.fd
-File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
-)
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 63.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 63.
-
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fmsfutm.fd
-File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
-)
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 63.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 63.
-
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fmxfutm.fd
-File: fmxfutm.fd futm-extension
-)
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 63.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 63.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/t1futs.fd
-File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
-)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+ ABD: EveryShipout initializing macros
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
-\scratchdimen=\dimen185
+\scratchcounter=\count132
+\scratchdimen=\dimen176
 \scratchbox=\box45
-\nofMPsegments=\count137
-\nofMParguments=\count138
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count139
-\MPscratchDim=\dimen186
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
-\everyMPtoPDFconversion=\toks44
+\nofMPsegments=\count133
+\nofMParguments=\count134
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen177
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
+\everyMPtoPDFconversion=\toks45
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1046,7 +708,6 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-ABD: EveryShipout initializing macros
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1081,227 +742,211 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 66
+LaTeX Font Info:    Try loading font information for OT1+cmbr on input line 61.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/cmbright/ot1cmbr.fd
+File: ot1cmbr.fd 2005/04/13 v8.1 (WaS)
+)
+LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 61
 .
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fmlfutmi.fd
-File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
-)
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 66.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 66.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 66.
-LaTeX Font Info:    Try loading font information for U+msa on input line 66.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+(/usr/local/texlive/2019/texmf-dist/tex/latex/cmbright/omlcmbrm.fd
+File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 61
+.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+(/usr/local/texlive/2019/texmf-dist/tex/latex/cmbright/omscmbrs.fd
+File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 66.
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 66.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 66.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 66.
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 67.
-
-(./LA_2_Skript.toc
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 3.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 3.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 3.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 3.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 8.27998pt on input line 3.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.43999pt on input line 3.
-)
+(./LA_2_Skript.toc)
 \tf@toc=\write4
 \openout4 = `LA_2_Skript.toc'.
 
  [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 75.
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--80
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 84.
+LaTeX Font Info:    Try loading font information for OMS+cmbr on input line 79.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/ts1futs.fd
-File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/cmbright/omscmbr.fd
+File: omscmbr.fd 2005/04/13 v8.1 (WaS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+LaTeX Font Info:    Font shape `OMS/cmbr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmbrs/m/n' tried instead on input line 79.
+LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <12> not available
+(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 87.
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 153--155
+Underfull \hbox (badness 10000) in paragraph at lines 148--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--193
+Underfull \hbox (badness 10000) in paragraph at lines 186--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 259--262
+Underfull \hbox (badness 10000) in paragraph at lines 254--257
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 317--320
+Underfull \hbox (badness 10000) in paragraph at lines 312--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 343--345
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--414
+Underfull \hbox (badness 10000) in paragraph at lines 406--409
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 427--432
+Underfull \hbox (badness 10000) in paragraph at lines 422--427
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
 
  []
 
 [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 610--611
+Underfull \hbox (badness 10000) in paragraph at lines 605--606
 
  []
 
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 741--742
+[11]
+
+LaTeX Font Warning: Font shape `OMS/cmbr/m/it' undefined
+(Font)              using `OMS/cmbr/m/n' instead
+(Font)              for symbol `textbullet' on input line 620.
+
+LaTeX Font Info:    Font shape `OMS/cmbr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmbrs/m/n' tried instead on input line 621.
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 736--737
 
  []
 
 [13] [14] [15]
-Overfull \hbox (29.05505pt too wide) in paragraph at lines 866--876
-\T1/futs/m/n/12 Ist $\FML/futmi/m/it/12 I \FMS/futm/m/n/12 Å f\FML/futmi/m/it/1
-2 i[]; :::; i[]\FMS/futm/m/n/12 g$ \T1/futs/m/n/12 end-lich, so schreibt man di
-e Ele-men-te von $[] \FML/futmi/m/it/12 X[] \FMS/futm/m/n/12 Å [] \FML/futmi/m/
-it/12 X[]$ \T1/futs/m/n/12 auch als Tu-pel $[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 880--881
+Underfull \hbox (badness 10000) in paragraph at lines 875--876
 
  []
 
-[16]
-Overfull \hbox (6.55319pt too wide) in paragraph at lines 945--950
-\T1/futs/m/n/12 Die No-ta-ti-on er-in-nert an das Ska-lar-pro-dukt und das ist 
-durch-aus ge-wollt. F¸r For-ma-li-sten: $\FMS/futm/m/n/12 h\FML/futmi/m/it/12 x
-; '\FMS/futm/m/n/12 i[]$ 
+[16] [17] [18]
+
+LaTeX Font Warning: Font shape `T1/cmbr/bx/it' undefined
+(Font)              using `T1/cmbr/bx/n' instead on input line 1047.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1089
+
  []
 
-[17] [18]
-LaTeX Font Info:    Font shape `T1/futs/bx/it' in size <12> not available
-(Font)              Font shape `T1/futs/b/it' tried instead on input line 1052.
 
- [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
-
+Overfull \hbox (9.68489pt too wide) in paragraph at lines 1093--1095
+\T1/cmbr/m/sl/12 Man nennt $\OML/cmbrm/m/it/12 T[]$ \T1/cmbr/m/sl/12 auch die z
+u $\OML/cmbrm/m/it/12 T$ \T1/cmbr/m/sl/12 dua-le Ab-bil-dung. Die Zu-ord-nung $
+\OML/cmbrm/m/it/12 Ad \OT1/cmbr/m/n/12 : [][](\OML/cmbrm/m/it/12 V; W\OT1/cmbr/
+m/n/12 ) \OMS/cmbrs/m/n/12 ! [][]\OT1/cmbr/m/n/12 (\OML/cmbrm/m/it/12 W[]; V[]\
+OT1/cmbr/m/n/12 )$
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1150--1153
+Underfull \hbox (badness 10000) in paragraph at lines 1145--1148
 
  []
 
-[21]
-Overfull \hbox (6.76884pt too wide) in paragraph at lines 1212--1216
-\FMS/futm/m/n/12 h^^@j^^@i[]$ \T1/futs/m/n/12 be-zeich-net Ska-lar-pro-duk-te, 
-$\FMS/futm/m/n/12 h^^@\FML/futmi/m/it/12 ; \FMS/futm/m/n/12 ^^@i[]$ \T1/futs/m/
-n/12 die Dua-li-t‰t. Wei-ter-hin be-zeich-net $\FML/futmi/m/it/12 T[]$ \T1/futs
-/m/n/12 die dua-le (trans-
+[21] [22]
+Overfull \hbox (2.68535pt too wide) in paragraph at lines 1261--1263
+[]\T1/cmbr/m/n/12 Mit der punkt-wei-sen Ad-di-ti-on und ska-la-ren Mul-ti-pli-k
+a-ti-on wird $\OMS/cmbrs/m/n/12 L\OT1/cmbr/m/n/12 (\OML/cmbrm/m/it/12 X[]; :::;
+ X[]\OT1/cmbr/m/n/12 ; \OML/cmbrm/m/it/12 Y\OT1/cmbr/m/n/12 )$
  []
 
-[22]
-Overfull \hbox (0.16022pt too wide) in paragraph at lines 1266--1268
-[]\T1/futs/m/n/12 Mit der punkt-wei-sen Ad-di-ti-on und ska-la-ren Mul-ti-pli-k
-a-ti-on wird $\FMS/futm/m/n/12 L\T1/futs/m/n/12 (\FML/futmi/m/it/12 X[]; :::; X
-[]\T1/futs/m/n/12 ; \FML/futmi/m/it/12 Y\T1/futs/m/n/12 )$
+[23]
+Overfull \hbox (6.90247pt too wide) detected at line 1301
+\OML/cmbrm/m/it/12 x \OT1/cmbr/m/n/12 = (\OML/cmbrm/m/it/12 x[]; :::; x[]; ^^Q 
+\OT1/cmbr/m/n/12 + \OML/cmbrm/m/it/12 ^^U \OMS/cmbrs/m/n/12 ^^A \OML/cmbrm/m/it
+/12 ^^M; x[]; ::::; x[]\OT1/cmbr/m/n/12 ) \OMS/cmbrs/m/n/12 ^^@ \OT1/cmbr/m/n/1
+2 (\OML/cmbrm/m/it/12 x[]; ::::; x[]; ^^Q; x[]; ::::; x[]\OT1/cmbr/m/n/12 ) \OM
+S/cmbrs/m/n/12 ^^@ \OML/cmbrm/m/it/12 ^^U \OMS/cmbrs/m/n/12 ^^A \OT1/cmbr/m/n/1
+2 (\OML/cmbrm/m/it/12 x[]; ::::; x[]; ^^M; x[]; ::::; x[]\OT1/cmbr/m/n/12 )
  []
 
-[23] (./LA_2_Skript.aux) ) 
+[24] (./LA_2_Skript.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
 Here is how much of TeX's memory you used:
- 17147 strings out of 492616
- 336856 string characters out of 6129482
- 393576 words of memory out of 5000000
- 20628 multiletter control sequences out of 15000+600000
- 97798 words of font info for 118 fonts, out of 8000000 for 9000
+ 15820 strings out of 492616
+ 316060 string characters out of 6129482
+ 376111 words of memory out of 5000000
+ 19388 multiletter control sequences out of 15000+600000
+ 22735 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,20n,82p,504b,1197s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/b
-ase/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fouri
-er-bb.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourie
-r-mcl.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourie
-r-mex.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourie
-r-ml.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourier
--mlit.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/fourier/fourie
-r-ms.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putb8a.pf
-b></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local
-/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on LA_2_Skript.pdf (23 pages, 183809 bytes).
+ 61i,20n,82p,504b,1194s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pf
+b></usr/local/texlive/2019/texmf-dist/fonts/type1/public/hfbright/hfbr10.pfb></
+usr/local/texlive/2019/texmf-dist/fonts/type1/public/hfbright/hfbr8.pfb></usr/l
+ocal/texlive/2019/texmf-dist/fonts/type1/public/hfbright/hfbrbs10.pfb></usr/loc
+al/texlive/2019/texmf-dist/fonts/type1/public/hfbright/hfbrbs8.pfb></usr/local/
+texlive/2019/texmf-dist/fonts/type1/public/hfbright/hfbrmi10.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/hfbright/hfbrmi8.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/hfbright/hfbrsy10.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/hfbright/hfbrsy8.pfb></usr/local/texlive/20
+19/texmf-dist/fonts/type1/public/cm-super/sfbbx10.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/public/cm-super/sfbmo10.pfb></usr/local/texlive/2019/tex
+mf-dist/fonts/type1/public/cm-super/sfbmr10.pfb></usr/local/texlive/2019/texmf-
+dist/fonts/type1/public/cm-super/sfbmr17.pfb></usr/local/texlive/2019/texmf-dis
+t/fonts/type1/public/cm-super/sfbsr8.pfb>
+Output written on LA_2_Skript.pdf (24 pages, 245560 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
