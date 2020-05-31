@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.3)  29 MAY 2020 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.4.3)  1 JUN 2020 00:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -938,50 +938,50 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 (./LA_2_Skript.aux)
 \openout1 = `LA_2_Skript.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 61.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 63.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 63.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 61.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 61.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 63.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 63.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 61.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 61.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 63.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 63.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 61.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 63.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 61.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 63.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/t1futs.fd
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
@@ -1081,40 +1081,40 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 64
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 66
 .
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/fmlfutmi.fd
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 64.
+(Font)              scaled to size 13.24796pt on input line 66.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 64.
+(Font)              scaled to size 9.19998pt on input line 66.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 64.
-LaTeX Font Info:    Try loading font information for U+msa on input line 64.
+(Font)              scaled to size 7.35999pt on input line 66.
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 64.
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 64.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 66.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 64.
+(Font)              scaled to size 13.24796pt on input line 66.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 64.
+(Font)              scaled to size 9.19998pt on input line 66.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 64.
+(Font)              scaled to size 7.35999pt on input line 66.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 65.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 67.
 
 (./LA_2_Skript.toc
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
@@ -1139,98 +1139,98 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 73.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 75.
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--82
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
 
  []
 
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 82.
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 84.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/fourier/ts1futs.fd
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--191
+Underfull \hbox (badness 10000) in paragraph at lines 191--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 257--260
+Underfull \hbox (badness 10000) in paragraph at lines 259--262
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 315--318
+Underfull \hbox (badness 10000) in paragraph at lines 317--320
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--336
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 341--343
+Underfull \hbox (badness 10000) in paragraph at lines 343--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--412
+Underfull \hbox (badness 10000) in paragraph at lines 411--414
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 425--430
+Underfull \hbox (badness 10000) in paragraph at lines 427--432
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
 
  []
 
 [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 608--609
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
 
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 739--740
+Underfull \hbox (badness 10000) in paragraph at lines 741--742
 
  []
 
 [13] [14] [15]
-Overfull \hbox (29.05505pt too wide) in paragraph at lines 864--874
+Overfull \hbox (29.05505pt too wide) in paragraph at lines 866--876
 \T1/futs/m/n/12 Ist $\FML/futmi/m/it/12 I \FMS/futm/m/n/12 Å f\FML/futmi/m/it/1
 2 i[]; :::; i[]\FMS/futm/m/n/12 g$ \T1/futs/m/n/12 end-lich, so schreibt man di
 e Ele-men-te von $[] \FML/futmi/m/it/12 X[] \FMS/futm/m/n/12 Å [] \FML/futmi/m/
@@ -1238,12 +1238,12 @@ it/12 X[]$ \T1/futs/m/n/12 auch als Tu-pel $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 878--879
+Underfull \hbox (badness 10000) in paragraph at lines 880--881
 
  []
 
 [16]
-Overfull \hbox (6.55319pt too wide) in paragraph at lines 943--948
+Overfull \hbox (6.55319pt too wide) in paragraph at lines 945--950
 \T1/futs/m/n/12 Die No-ta-ti-on er-in-nert an das Ska-lar-pro-dukt und das ist 
 durch-aus ge-wollt. F¸r For-ma-li-sten: $\FMS/futm/m/n/12 h\FML/futmi/m/it/12 x
 ; '\FMS/futm/m/n/12 i[]$ 
@@ -1251,32 +1251,39 @@ durch-aus ge-wollt. F¸r For-ma-li-sten: $\FMS/futm/m/n/12 h\FML/futmi/m/it/12 x
 
 [17] [18]
 LaTeX Font Info:    Font shape `T1/futs/bx/it' in size <12> not available
-(Font)              Font shape `T1/futs/b/it' tried instead on input line 1050.
+(Font)              Font shape `T1/futs/b/it' tried instead on input line 1052.
 
  [19]
-Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
+Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 1148--1151
+Underfull \hbox (badness 10000) in paragraph at lines 1150--1153
 
  []
 
 [21]
-Overfull \hbox (6.76884pt too wide) in paragraph at lines 1210--1214
+Overfull \hbox (6.76884pt too wide) in paragraph at lines 1212--1216
 \FMS/futm/m/n/12 h^^@j^^@i[]$ \T1/futs/m/n/12 be-zeich-net Ska-lar-pro-duk-te, 
 $\FMS/futm/m/n/12 h^^@\FML/futmi/m/it/12 ; \FMS/futm/m/n/12 ^^@i[]$ \T1/futs/m/
 n/12 die Dua-li-t‰t. Wei-ter-hin be-zeich-net $\FML/futmi/m/it/12 T[]$ \T1/futs
 /m/n/12 die dua-le (trans-
  []
 
-[22] (./LA_2_Skript.aux) ) 
+[22]
+Overfull \hbox (0.16022pt too wide) in paragraph at lines 1266--1268
+[]\T1/futs/m/n/12 Mit der punkt-wei-sen Ad-di-ti-on und ska-la-ren Mul-ti-pli-k
+a-ti-on wird $\FMS/futm/m/n/12 L\T1/futs/m/n/12 (\FML/futmi/m/it/12 X[]; :::; X
+[]\T1/futs/m/n/12 ; \FML/futmi/m/it/12 Y\T1/futs/m/n/12 )$
+ []
+
+[23] (./LA_2_Skript.aux) ) 
 Here is how much of TeX's memory you used:
- 17143 strings out of 492616
- 336832 string characters out of 6129482
- 393546 words of memory out of 5000000
- 20624 multiletter control sequences out of 15000+600000
+ 17147 strings out of 492616
+ 336856 string characters out of 6129482
+ 393576 words of memory out of 5000000
+ 20628 multiletter control sequences out of 15000+600000
  97798 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,20n,82p,504b,1197s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1291,10 +1298,10 @@ r-ms.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putb8a.pf
 b></usr/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putbi8a.pfb></us
 r/local/texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local
 /texlive/2019/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on LA_2_Skript.pdf (22 pages, 178531 bytes).
+Output written on LA_2_Skript.pdf (23 pages, 183809 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

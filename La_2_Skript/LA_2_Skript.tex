@@ -26,6 +26,7 @@
 \newtheorem{claim}{Behauptung}
 \newtheorem*{claim*}{Behauptung}
 \newtheorem*{attention}{Achtung!}
+\newtheorem*{example}{Beispiel}
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
@@ -49,6 +50,7 @@
 \DeclareMathOperator{\Ann}{Ann}
 \DeclareMathOperator{\End}{End}
 \DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\Abb}{Abb}
 
 \setcounter{section}{6}
 
@@ -1235,4 +1237,73 @@
 			&= \bar{\lambda} T^{ad}(x)
 		\end{split}
 	\end{equation}
+	\subsection{Das Tensorprodukt}
+	
+	Eine weitere vielseitige Konstruktion von neuen Vektorräumen aus gegebenen ist das Tensorprodukt. \\
+	Im Folgenden seien $X_i, Y_i, Z_i, i = 1,2...$ Vektorräume über dem Körper $\mathbb{K}$. Im Abschnitt über Determinanten hatte wir bereits multilineare Abbildungen berührt. Ebenso im Abschnitt pber Bilinearformen
+	\begin{definition}
+		Eine Abbildung $T: X_1 \times .... \times X_n \rightarrow Y$ heißt \textbf{n-fach multilinear}, wenn für jedes $i \in \{ 1,...,n \}$ und feste Vektoren $x_1,..., \hat{x_i},....,x_n$ die Abbildung
+		\begin{equation}
+			T(x_1,...,x_{i-1},x_{i+1},...,x_n) \in \Hom_{\mathbb{K}}(X_i,Y)
+		\end{equation}
+		Schreibweise: $\mathcal{L}(X_1,...,X_n;Y)$ bezeichnet die Menge der n-fach multilinearen Abbildungen $X_1 \times .... \times X_n \rightarrow Y$.
+	\end{definition}
+	\begin{example}
+		\begin{proofenum} 
+			\item 
+				Ist $\dim V = n$, so ist die Determinantenfunktion
+				\begin{equation}
+					\det : V \times ... \times V \rightarrow \mathbb{K}
+				\end{equation}
+			 	n- fach multilinear.
+			 \item 
+			 	Eine Bilinearform ist 2-fach multilinear. 
+		\end{proofenum}
+	\end{example}
+	\begin{remark}
+		\begin{enumerate}
+			\item 
+				Mit der punktweisen Addition und skalaren Multiplikation wird $\mathcal{L}(X_1,...,X_n;Y)$ selbst zu einem Vektorraum über $\mathbb{K}$. Für $n=1$ gilt trivialerweise $\mathcal{L}(X_1;Y)=\Hom_{\mathbb{K}}(X,Y)$
+			\item
+				Für ein festes $1 \leq k \leq n$ ist
+				\begin{equation*}
+					\begin{split}
+						\phi : \mathcal{L}(X_k, \mathcal{L}(X_1,...,\hat{X_k},...,X_n;Y)) &\rightarrow \mathcal{L}(X_1,...,X_n;Y) \\
+						\phi(T)(x_1,...,x_n) := T(x_k)(x_1,...,\hat{x_k},....,x_n)
+					\end{split}
+				\end{equation*}
+				ein Isomorphismus.
+			\item
+				Sind alle involvierten Vektorräume endlich-dimensional, so gilt
+				\begin{equation}
+					\dim \left( \mathcal{L}(X_1,...,X_n;Y) \right) = \left( \prod_{j = 1}^n \dim X_j \right) \cdot \dim Y
+				\end{equation}
+		\end{enumerate}
+	\end{remark}
+	\begin{definition}{\textbf{(Konstruktion des Tensorprodukts)}}
+		Man starte mit dem (Riesen-)raum, welcher dadurch entsteht, dass wir die Elemente von $X_1 \times .... \times X_n$ als Indexmenge auffassen:
+		\begin{equation}
+			\bar{\zeta}:= \Abb (X_1, \times .... \times X_n, \mathbb{K})
+		\end{equation}
+		Bekanntlich ist für jede Menge $\Xi$ der Raum $\Abb (\Xi, \mathbb{K})$ ein $\mathbb{K}$-Vektorraum bezüglich punktweiser Addition und skalar Multiplikation. Man bezeichne für $x_i \in X_i$
+		\begin{equation}
+			\begin{split}
+				&(x_1,...,x_n) \in \bar{\zeta}  \\
+				&(x_1,...,x_n) \left( (y_1,...,y_n) \right)= \begin{cases}
+						1, x_1 = y_1,....,x_n= y_n \\
+						0, sonst
+					\end{cases}
+			\end{split}
+		\end{equation}
+		Dann ist $\bar{\zeta}$ der Raum aller (formalen) Linearkombinationen
+		\begin{equation}
+			\sum_{endl., \ 
+			(x_1,...,x_n) \in X_1 \times .... \times X_n} \lambda_{(x_1,...,x_n)} (x_1,...,x_n)
+		\end{equation}
+		Sei $\mathcal{U}$ der Unterraum von $\bar{\zeta}$, welche aufgespannt wird von den Vektoren der Form
+		\begin{equation}
+			x = (x_1,...,x_{i-1}, \eta + \lambda \cdot \gamma, x_{i+1},....,x_n)-(x_1,....,x_{i-1},\eta,x_{i+1},....,x_n) - \lambda \cdot (x_1,....,x_{i-1}, \gamma,x_{i+1},....,x_n)
+		\end{equation}
+		Der Quotientenraum $\bar{\zeta}/\mathcal{U}$ heißt \textbf{Tensorprodukt} der Räume $X_1,...,X_n$ über $\mathbb{K}$.
+	\end{definition}
 \end{document}

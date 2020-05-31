@@ -9,3 +9,4 @@
 \contentsline {subsection}{\numberline {8.3}(Externe) direkte Summe und direktes Produkt}{15}% 
 \contentsline {subsection}{\numberline {8.4}Der Dualraum}{17}% 
 \contentsline {subsection}{\numberline {8.5}Duale Abbildungen}{20}% 
+\contentsline {subsection}{\numberline {8.6}Das Tensorprodukt}{23}% 
