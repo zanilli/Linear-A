@@ -17,6 +17,7 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Korollar}
 \newtheorem{claim}{Behauptung}
+\newtheorem{axiom}{Axiom}
 \newtheorem*{claim*}{Behauptung}
 \newtheorem*{attention}{Achtung!}
 \newtheorem*{example}{Beispiel}
@@ -287,9 +288,9 @@
 		 Wir führen nun eine Induktion nach $n = \dim V$ und nehmen an, die Behauptung gelte für alle Dimensionen $<n$: \\
 		 $U = \langle e_1 \rangle^{\perp} \subset V$ ist ein unitärer Vektorraum der Dimension $n-1$. \\
 		 Wir zeigen:
-		 \begin{claim}
+		 \begin{claim*}
 		 	$T|_U \in \End_{\mathbb{C}}(U)$ ist normal.
-		 \end{claim}
+		 \end{claim*}
 		 Die Induktionsvorraussetzung liefert die Existenz einer Orthonormalbasis $\{ e_2,...,e_n \}$ von $U$ mit $Te_j = \lambda_j e_j$. $\{ e_1,e_2,...,e_n \}$ ist dann die gewünschte Basis. \\
 		 Es bleibt Behauptung 1 zu zeigen: \\
 		 Sei $x \in U$. Dann ist 
@@ -467,6 +468,9 @@
 			Da $T$ normal ist, sieht man nun wie im Beweis von Satz 7.8.1, dass T auch den Unterraum $U = \langle \zeta,\eta \rangle^{\perp}$ invariant lässt und $T|_U$ ebenfalls normal ist. Nun wendet man die Induktionsvoraussetzung auf $U$ an und ist fertig
 		\end{itemize}
 	\end{proof}
+	
+	\newpage	
+	
 	\subsection{Orthogonale und unitäre Abbildungen}
 	Wie immer seien $V,W,...$ $\mathbb{K}$-Vektorräume mit Skalarprodukt. \\
 	\begin{definition}
@@ -762,6 +766,9 @@
 	\begin{proof}
 		Übung.
 	\end{proof}
+	
+	\newpage	
+	
 	\subsection{Interne direkte Summe}
 	Im Folgenden sei $V$ ein $\mathbb{K}$-Vektorraum.
 	\begin{definition}{(und Satz)}
@@ -827,6 +834,9 @@
 		Dann ist wegen (ii) für jedes feste $i$ schon $\sum \lambda_{i_l}x_{i_l}=0$. Da aber $B_i$ linear unabhängig ist, folgt schon $\lambda_{i_l}=0, l \in I_i$.
 		Die letzte Aussage ist nun klar.
 	\end{proof}
+	
+	\newpage	
+	
 	\subsection{(Externe) direkte Summe und direktes Produkt}
 	Im letzten Abschnitt waren die Räume $U_i$ Unterräume eines Raumes $V$, so dass $\bigoplus U_i$ als Unterraum von $V$ konstruiert werden konnte. Abstrakter kann man zu beliebigen Vektorräumen $U_i$ einen Raum $V$ und Einbettungen $U_i \hookrightarrow V$ so konstruieren, dass die direkte Summe $\bigoplus U_i$ gebildet werden kann. Allerdings gibt es für unendliche Indexmengen zwei Varianten. \\
 	Seien $X_i, i \in I$ Vektorräume über $\mathbb{K}$. $I$ ist eine beliebige Indexmenge. Wir erinnern an das allgemeine kartesische Produkt
@@ -932,6 +942,9 @@
 			x(i) =0, i \notin \{ i_1,...,i_n \}
 		\end{equation}
 	\end{proof}
+	
+	\newpage	
+	
 	\subsection{Der Dualraum}
 	\begin{definition}
 		Sei $V$ ein $\mathbb{K}$-Vektorraum. Dann heißt
@@ -1084,6 +1097,9 @@
 		\end{tikzcd}
 	\end{center}
 	Das heißt, falls $\dim V < \infty$, so ist $\bar{V}$ kanonisch isomorph zu $V^*$. Alternativ ist die Abbildung $x \mapsto \langle -,x \rangle$ ein Isomorphismus von $V$ auf $\bar{V}^* = \bar{V^*}$
+	
+	\newpage	
+	
 	\subsection{Duale Abbildungen}
 	Schon bei der Diskussion der Vektorräume mit Skalarprodukt tauchte die Frage auf, ob sich der Begriff der adjungierten Abbildung nicht auf allgemeine Räume ausdehnen lässt. In der Tat ist dies in gewisser Weise möglich. Dies und den Zusammenhang mit Vektorräumen mit Skalarprodukt wollen wir hier diskutieren. \\
 	\begin{theorem}{\textbf{(und Definition)}}
@@ -1232,6 +1248,9 @@
 			&= \bar{\lambda} T^{ad}(x)
 		\end{split}
 	\end{equation}
+	
+	\newpage	
+	
 	\subsection{Das Tensorprodukt}
 	
 	Eine weitere vielseitige Konstruktion von neuen Vektorräumen aus gegebenen ist das Tensorprodukt. \\
@@ -1299,6 +1318,373 @@
 		\begin{equation}
 			x = (x_1,...,x_{i-1}, \eta + \lambda \cdot \gamma, x_{i+1},....,x_n)-(x_1,....,x_{i-1},\eta,x_{i+1},....,x_n) - \lambda \cdot (x_1,....,x_{i-1}, \gamma,x_{i+1},....,x_n)
 		\end{equation}
-		Der Quotientenraum $\bar{\zeta}/\mathcal{U}$ heißt \textbf{Tensorprodukt} der Räume $X_1,...,X_n$ über $\mathbb{K}$.
+		Der Quotientenraum $\bar{\zeta}/\mathcal{U}$ heißt \textbf{Tensorprodukt} der Räume $X_1,...,X_n$ über $\mathbb{K}$. \\
+		Schreibweise: $X_1 \otimes_{\mathbb{K}} .... \otimes_{\mathbb{K}} X_n $. \\
+		Die kanonische Quotientenabbildung wird als
+		\begin{equation}
+			\begin{split}
+				\pi : X_1 \times .... \times X_n &\rightarrow X_1 \otimes ... \otimes X_n \\
+				(x_1,...,x_n) &\mapsto x_1 \otimes ... \otimes x_n
+			\end{split}
+		\end{equation}
 	\end{definition}
+	\begin{theorem}{(Universelle Eigenschaft des Tensorprodukts)}
+		\begin{proofenum}
+			\item 	
+				$\pi$ ist n-fach multilinear. 
+			\item
+				Zu jeder n-fach multilinearen Abbildung $T \in \mathcal{L}(X_1,...,X_n;Y)$ gibt es genau eine lineare Abbildung $\hat{T} \in \mathcal{L}(X_1 \otimes ... \otimes X_n;Y)$, so dass das Diagramm
+				\begin{center}
+					\begin{tikzcd}
+						X_1 \times ... \times X_n \arrow[d, "\pi" ,swap] \arrow[r, "T"] & Y \\
+						X_1 \otimes ... \otimes X_n \arrow[ur, "\hat{T}",swap]
+					\end{tikzcd}
+				\end{center}
+				kommutiert.
+			\item 
+				Ist $Z$ ein $\mathbb{K}$-Vektorraum mit $\bar{\pi} \in \mathcal{L}(X_1,...,X_n;Z)$, so dass (ii) sinngemäß gilt, wenn man $X_1 \otimes ... \otimes X_n$ durch $Z$ und $\pi$ durch $\bar{\pi}$ ersetzt, so ist $Z$ kanonisch isomorph zu $X_1 \otimes .... \otimes X_n$. Unter diesem Isomorphismus geht $\bar{\pi}$ in $\pi$ über.
+		\end{proofenum}
+	\end{theorem}
+	\begin{proof}
+		\begin{proofenum}
+			\item 
+				Ist aus der Definition von $\bar{\zeta}/\mathcal{U}$ offensichtlich.
+			\item
+				Zu gegebenem $T \in \mathcal{L}(X_1,...,X_n;Y)$ setzt man
+				\begin{equation}
+					\begin{split}
+						\tilde{T} : \bar{\zeta} &\rightarrow Y \\
+						(x_1,...,x_n) \mapsto T(x_1,...,x_n)
+					\end{split}
+				\end{equation}
+				Beachte, dass für $x_j \in X_j$ der Vektor $(x_1,...,x_n)$ ein Basisvektor von $\bar{\zeta}$ ist. Daher ist $\tilde{T} \in \Hom_{\mathbb{K}}(\bar{\zeta}, Y)$. Weiterhin ist
+				\begin{equation}
+					\begin{split}
+						\tilde{T} ( &(x_1,...,x_{i-1}, \eta + \lambda \cdot \gamma, x_{i+1},....,x_n)-(x_1,....,x_{i-1},\eta,x_{i+1},....,x_n) \\
+						 &- \lambda \cdot (x_1,....,x_{i-1}, \gamma,x_{i+1},....,x_n) ) \\
+						 &= 0
+					\end{split}
+				\end{equation}
+				also gilt $\mathcal{U} \subset \ker \tilde{T}$. Folglich gibt es nach der Universellen Eigenschaft des Quotienten eine lineare Abbildung $\hat{T}: \bar{\zeta}/\mathcal{U} \rightarrow Y$, so dass das Diagramm
+				\begin{center}
+					\begin{tikzcd}
+						\bar{\zeta} \arrow[r, "\tilde{T}"] \arrow[d] & Y \\
+						X_1 \otimes ... \otimes X_n = \bar{\zeta}/\mathcal{U} \arrow[ur, "\hat{T}", swap]
+					\end{tikzcd}
+				\end{center}
+				kommutiert. Für $x_j \in X_j$ gilt
+				\begin{equation}
+					\hat{T}(x_1 \otimes ... \otimes x_n) = \tilde{T}\left( (x_1,...,x_n) \right)= T(x_1,...,x_n)
+				\end{equation}
+			\item 
+				Wir haben das kommutative Diagram
+				\begin{center}
+					\begin{tikzcd}
+						X_1 \times ... \times X_n \arrow[rr, "\tilde{\pi}"] \arrow[ddd, "\pi"] & & Z \arrow[dddll, bend right, "\bar{\pi}"] \\
+						& \\
+						& \\
+						X_1 \otimes ... \otimes X_n \arrow[uuurr, bend right, "\hat{\tilde{\pi}}", swap]
+					\end{tikzcd}
+				\end{center}
+				Es folgt sofort
+				\begin{equation}
+					\begin{split}
+						\left( \bar{\pi} \circ \hat{\tilde{\pi}} \right) (x_1 \otimes ... \otimes x_n) &= \left( \bar{\pi} \circ \tilde{\pi} \right)(x_1,...,x_n) \\
+						&= \pi(x_1,...,x_n) \\
+						&= x_1 \otimes ... \otimes x_n
+					\end{split}
+				\end{equation}
+				Aus der Eindeutigkeit von $\bar{\pi}$ folgt die Surjektivität von $\bar{\pi}$. Also erhält man durch Vertauschen der Rollen von $\pi$ und $\tilde{\pi}$ auch $\hat{\tilde{\pi}} \circ \bar{\pi} = id$.
+		\end{proofenum}
+	\end{proof}
+	Vektoren von $X_1 \otimes ... \otimes X_n$ haben also die Gestalt
+		\begin{equation}
+			\sum_{endl} x_1^{(i)} \otimes ... \otimes x_n^{(i)}
+		\end{equation}
+		mit $x_j^{(i)} \in X_j$. Allerdings ist eine solche Summenzerlegung im Allgemeinen nicht eindeutig! \\
+		Allerdings hat man den
+		\begin{theorem}
+			Seien $B_1,...,B_n$ Basen von $X_1,...,X_n$. Dann ist
+			\begin{equation}
+				B:= \left\{ b_1 \otimes ... \otimes b_n | \forall_i b_i \in B_i \right\}
+			\end{equation}
+			eine Basis von $X_1 \otimes ... \otimes X_n$. \\
+			Insbesondere ist im Falle endlicher Dimensionen
+			\begin{equation}
+				\dim X_1 \otimes ... \otimes X_n = \prod_{j=1}^n \dim X_j
+			\end{equation}
+		\end{theorem}
+		\begin{proof}
+			\begin{enumerate}
+				\item 
+					Es ist offensichtlich, dass span$(B) = X_1 \otimes ... \otimes X_n$.  \\
+					Es genügt also, jeden solchen Vektor als Element von span$(B)$ zu identifizieren. Sei etwa \\
+					\begin{equation}
+						\begin{split}
+							x_j &= \sum_{endl} \lambda_{ij} b_i \\
+							\Rightarrow x_1 \otimes ... \otimes x_n &= \sum_{endl} \lambda_{i_1 1} \lambda_{i_2 2} \cdot ... \cdot \lambda_{i_n n} \ b_{i_1} \otimes ... \otimes b_{i_n} \in span(B)
+						\end{split}
+					\end{equation}
+				\item
+					Lineare Unabhängigkeit: Hierzu verwende man die universelle Eigenschaft. Um die Notation nicht zu überfrachten, beschränken wir uns auf $n = 2$ (der Rest folgt induktiv): \\
+					Sei also $X_1 = X$, $X_2 = Y$ und $B_1 = \{ b_i | i \in I \}, B_2 = \{ c_j | j \in J \}$ mit Indexmengen $I,J$. Setze obsulet
+					\begin{equation}
+						\begin{split}
+							\hat{b_i} &:= (b_i, 0) \in X \times Y = X \oplus Y \\
+							\hat{c_j} &:= (0,c_i) 
+						\end{split}
+					\end{equation}
+					Dann ist $\left\{  \hat{b_i} | i \in I \right\} \cup \left\{ \hat{c_j} | j \in J \right\}$ eine Basis von $X \oplus Y$. \\
+					Man fixiere nun $i_0 \in I, j_0 \in J$: \\
+					Betrachte
+					\begin{equation}
+						\begin{split}
+							\lambda_{i_0,j_0}: X \times Y &\rightarrow \mathbb{K} \\
+							(\sum \alpha_i b_i, \sum \beta_j c_j) &\mapsto \alpha_{i_0} \cdot  \beta_{i_0}
+						\end{split}
+					\end{equation}
+					$\lambda_{i_0,j_0}$ ist bilinear, also gibt es nach der universellen Eigenschaft ein kommutatives Diagramm
+					\begin{center}
+						\begin{tikzcd}
+							X \times Y \arrow[r, "\lambda_{i_0,j_0}"] \arrow[d] & \mathbb{K} \\
+							X \otimes Y \arrow[ur, "\hat{\lambda_{i_0,j_0}}", swap]
+						\end{tikzcd}
+					\end{center}
+					Sei nun
+					\begin{equation}
+						\begin{split}
+							& \sum_{endl} \alpha_{k,l} b_k \otimes c_l = 0 \\
+							\Rightarrow 0 &= \hat{\lambda_{i_0,j_0}}\left( \sum_{endl} \alpha_{k,l} b_k \otimes c_l \right) \\
+							&= \sum_{endl} \alpha_{k,l} \lambda_{i_0,j_0}(b_k,c_l) \\
+							& \overset{!}{=} \alpha_{i_0,j_0}
+						\end{split}
+					\end{equation}
+					Da $i_0,j_0$ beliebig waren, folgt $\forall_{k,l} \alpha_{k,l} =0$ und damit die lineare Unabhängigkeit von $\left\{ b_i \otimes c_j \right\}$.
+			\end{enumerate}
+		\end{proof}
+		\begin{example}
+			\begin{proofenum}
+				\item
+					Komplexifizierung/Koeffizientenerweiterung: \\
+					Sei $V$ ein $K$-Vektorraum und $L \supset K$ eine Körpererweiterung. Dann kann $L$ auch als $K$-Vektorraum aufgefasst werden.
+					\begin{equation}
+						V_L := L \otimes_{\mathbb{K}} V
+					\end{equation}
+					ist dann in natürlicher Weise ein $L$-Vektorraum. Im Fall $K = \mathbb{R}, L = \mathbb{C}$ entspricht dies der schon besprochenen Komplexifizierung. 
+				\item 
+					Seien $V,W$ $K$-Vektorräume endlicher Dimension
+					\begin{equation}
+						\begin{split}
+							\Theta: V^* \times W &\rightarrow \Hom_{K}(V,W) \\
+							(v^*,w) &\mapsto \Theta_{V^*,W}
+						\end{split}
+					\end{equation}
+					mit $\Theta_{V^*,W}(v)=\langle v, v^* \rangle_{V,V^*}w$. \\
+					$\Theta$ is bilinear, also gibt es ein kommutatives Diagramm
+					\begin{center}
+						\begin{tikzcd}
+							V^* \times W \arrow[r, "\Theta"] \arrow[d] & \Hom_{K}(V,W) \\
+							V^* \otimes W \arrow[ur, "\hat{\Theta}",swap]
+						\end{tikzcd}
+					\end{center}
+					Mittels Basen prüft man nach, dass $\hat{\Theta}$ surjektiv ist. Da aber 
+					\begin{equation}
+						\dim \Hom_{K}(V,W) = \dim V \cdot \dim W = \dim (V^* \otimes W)
+					\end{equation}
+					muss $\hat{\Theta}$ ein Isomorphismus sein.
+			\end{proofenum}
+		\end{example}
+		\begin{exercise}
+			\begin{enumerate}
+				\item 
+					\begin{equation}
+						X \otimes Y \cong Y \otimes X
+					\end{equation}
+				\item 
+					Seien $X = X_1 \oplus X_2, Y = Y_1 \oplus Y_2$, so folgt
+					\begin{equation}
+						X \otimes Y = \left( X_1 \otimes Y_1 \right) \oplus \left( X_1 \otimes Y_2 \right) \oplus \left( X_2 \otimes Y_1 \right) \oplus \left( X_2 \otimes Y_2 \right)
+					\end{equation}
+					\begin{corollary}
+												
+						Ist $(b_i)_{i \in I}$ eine Basis von $X$, so hat jedes $\zeta \in X \otimes Y$ eine Darstellung
+						\begin{equation}
+							\zeta = \sum_{endl} b_i \otimes y_i
+						\end{equation}
+						mit eindeutig bestimmten $y_i \in Y$, wobei $y_i=0$ für alle, bis auf endlich viele $y_i$.
+					\end{corollary}
+			\end{enumerate}
+		\end{exercise}
+		
+		\newpage		
+		
+		\subsection{Ein weniger naiver Blick auf Mengen}
+		
+		Die Existenz einer Basis eines beliebigen Vektorraums kann aus den bisher verwendeten Axiomen der naiven Mengenlehre nicht abgeleitet werden. Man benötigt dazu in ein oder anderer Form das Auswahlaxiom. Wir wollen dies hier nun etwas näher beleuchten. Naturgemäß wird es jetzt etwas formaler. Es wird daran erinnert, dass sämtliche mathematische Objekte letztlich Mengen sind.
+		\begin{definition}{(Familie)}
+			Eine Familie $(X_i)_{i \in I}$ von Mengen ist eine Abbildung $X_{\bullet}: I \rightarrow Z$. Dabei sind $I, Z$ Mengen.
+		\end{definition}
+		Diese Definition erfolgt zur Klarstellung, dass "Familien" keine außerhalb der Mengen stehende Objekte sind.
+		Vielmehr ist es lediglich eine bequeme Schreibweise. Es steht weniger die Abbildung im Vordergrund, als die Kollektion der Mengen $X_i$. Allerdings könnte man alternativ $\mathcal{F} = \{ Y \in \mathcal{P}(Z) | \exists_i X_i = Y \}$ betrachten und dies gleichzeitig als Indexmenge verwenden.
+		Das ist weniger intuitiv, aber logisch das gleiche.
+		Wir sind nun in der Lage, das Auswahlaxiom zu formulieren
+		\begin{axiom}{(Auswahlaxiom)(AC)}
+			Ist $\forall_i X_i \neq \emptyset$, so ist $\prod_{i \in I} X_i \neq \emptyset$
+		\end{axiom}
+		Das Auswahlaxiom ist intuitiv "offensichtlich", ist jedoch aus den restlichen Axiomen der sogenannten Zermelo-Fraenkelschen Mengentheorie (ZF) nicht beweisbar. Man kann zeigen
+		\begin{theorem}
+			Ist ZF widerspruchsfrei, so auch sowohl ZF + AC als auch ZF + $\lnot$AC
+		\end{theorem}
+		Das heißt, es existieren Modelle von ZF, in denen AC beweisbar ist und es gibt andere Modelle von ZF in denen $\lnot$AC beweisbar ist. Damit können sie nun ZF akzeptieren oder ablehnen. Wenn sie es ablehnen, kommen sie aber nicht sehr weit. Deshalb akzeptieren wir es.
+		AC sagt, dass man aus "beliebig vielen" Mengen jeweils ein Element wählen kann, egal wie groß die Indexmenge auch sein mag. Dies ist nicht der Ort, um zu sehr zu problematisieren/vertiefen. Der Pragmatiker sieht doch, dass AC wahr sein muss. Oder? Warten Sie...
+		\begin{definition}
+			\begin{enumerate}
+				\item 
+					Eine binäre Relation $\leq$ auf $X$ heißt Halbordnung, falls
+					\begin{itemize}
+						\item 
+							$\forall_{x \in X} x \leq x$ (reflexiv)
+						\item
+							$\forall_{x,yz \in X} x \leq y \land  y \leq z \Rightarrow x \leq z$(transitiv)
+						\item
+							$\forall_{x,y \in X} x \leq y \land y \leq x \Rightarrow x =y$
+					\end{itemize}
+					Beachte, dass es $x,y \in X$ geben kann, für die weder $x \leq y$ noch $y \leq x$.
+				\item
+					$(X, \leq)$ heißt Kette oder totalgeordnete Menge, falls $\forall_{x,y \in X} x \leq y \lor y \leq x$.
+			\end{enumerate}
+		\end{definition}
+		\begin{example}
+			\begin{enumerate}
+				\item
+					$X$ Menge, $(\mathcal{P}(X), \subset)$ ist halbgeordnet.
+				\item
+					$\mathbb{Z}, \mathbb{R}$ mit den üblichen $\leq$ sind total geordnet. 
+				\item 
+					$(X, \leq)$ heißt wohlgeordnet, falls $(X, \leq)$ total geordnet und jede Teilmenge $A \subset X$ ein kleinstes Element besitzt.
+					\begin{itemize}
+						\item
+							$(\mathbb{N}, \leq)$ ist wohlgeordnet.
+						\item
+							$(\mathbb{R}_+, \leq)$ ist nicht wohlgeordnet
+					\end{itemize}
+			\end{enumerate}
+		\end{example}
+		\begin{theorem}{(Wohlordnungssatz von Zermelo)(WO)}
+			Jede Menge $X \neq \emptyset$ kann wohlgeordnet werden.
+		\end{theorem}
+		\begin{proof}
+			Eine \textbf{sehr hässliche} Induktion.
+		\end{proof}
+		WO ist stärker als AC:
+		\begin{theorem}{(In ZF)}
+			WO $\Rightarrow$ AC
+		\end{theorem}
+		\begin{remark}
+			Unter ZF wollen wir hier die bisher verwendete naive Mengenlehre (ohne sie exakt in Axiomen zu formulieren) verstehen. Sie werden im Beweis genau sehen, welche Mengenoperationen verwendet werden. Der Satz sagt also, dass innerhalb dieses Rahmens der naiven Mengenlehre der WO das AC impliziert.
+		\end{remark}
+		\begin{proof}
+			Seien also $(X_i)_{i \in I}$ Mengen, $X= \bigcup_{i \in I} X_i, \ \forall_{i} X_i \neq \emptyset$. Sei (WO) $\leq$ eine Wohlordnung auf $X$. Für $U \in \mathcal{X}, U \neq \emptyset$ setze
+			\begin{equation}
+				\mathcal{M}(U) := \min \{ x \in X | x \in U \}
+			\end{equation}
+			$\mathcal{M}(U)$ existiert, da $\leq$ eine Wohlordnung ist. Offenbar ist dann
+			\begin{equation}
+				\begin{split}
+					f: I &\rightarrow X \\
+					f(i) &:= \mathcal{M}(X_i)
+				\end{split}
+			\end{equation}
+			eine Auswahlfunktion.
+		\end{proof}
+		Als nächstes wenden wir uns Maximalitätsprinzipien zu. Diese gehen zurück auf Hausdorff, Zermelo, Zorn
+		\begin{definition}
+			Sei $(X, \leq)$ halbgeordnet. $\bar{x} \in X$ heißt maximal, falls $\forall_{y \in X} y \leq x \Rightarrow y = x$. Mit anderen Worten gibt es bezüglich $\leq$ keine echt größeren Elemente.
+		\end{definition}
+		\begin{attention}
+			Es kann mehrere maximale Elemente geben. Sei
+			\begin{equation}
+				X = \left\{ \{ 1\}, \{ 1,2 \}, \{ 3,4 \}, \{ 5 \} \right\}
+			\end{equation}
+			mit $\subset$ als Halbordnung. \\
+			Dann sind $\{ 1,2 \}, \{ 3,4 \}, \{ 5 \}$ maximal.
+		\end{attention}
+		Ist $(X, \leq)$ halbgeordnet und sei $\kappa_X = \{ K \subset X | K \ Kette \} \subset \mathcal{P}(X)$. Dann ist $(\kappa_X, \subset)$ ebenfalls halbgeordnet. Wir betrachten die Ketten stets mit dieser Ordnung.
+		\begin{lemma}
+			Sei $\mathcal{C} \subset \kappa_X$ eine Kette (also eine Kette von Ketten in $X$). Dann ist $\bigcup \mathcal{C}$ eine Kette in $X$.
+		\end{lemma}
+		\begin{theorem}{(Hausdorffscher Maximalkettensatz)(HMK)}
+			Sei $(X, \leq), X \neq \emptyset$. Dann existiert eine maximale Kette $K \subset X$. Das heßt $(\kappa_X, \subset)$ besitzt maximale Elemente.
+		\end{theorem}
+		Für endliche Mengen ist das klar. Man starte mit irgendeinem Element $x \in X$ und der Kette $\{ x \}$. Falls $\{ x \}$ nicht maximal, so gibt es eine Kette $K_i \subset \{ x \}$. So fahre man induktiv fort... Aber was ist mit unendlichen Mengen?? 
+		\begin{lemma}{(Spezielles Lemma von Zorn)(ZLS)}
+			Sei $\emptyset \neq \xi \subset \mathcal{P}(X)$ ein nichtleeres Mengensytem (d.h. $\xi \neq 0$ ist Teilmenge der Potenzmenge einer Menge $X$). $\Xi$ sei durch $\subset$ teilweise geordnet. Für jede Kette $K \subset \xi$ sei $\bigcup K \in \xi$. Dann besitzt $\xi$ maximale Elemente.
+		\end{lemma}
+		\begin{theorem}
+			HMK $\Rightarrow$ ZLS
+		\end{theorem}
+		\begin{proof}
+			Sei $\xi$ wie in ZLS gegeben. \\
+			Aus HMK folgt, dass maximale Ketten $K_{max} \subset \xi$ gibt. Sei $\bar{x}= \bigcup K_{max}$. Nach der Vorraussetzung ist $\bar{x} \in \xi$. Wäre $\bar{x}$ nicht maximal, so gäbe es $y \in \xi$ mit $y \supsetneq \bar{x}$. Dann wäre aber $K_{max} \cup \{ y\}$ eine Kette, welche echt größer als $K_{max}$ wäre. Widerspruch!
+			\begin{attention}
+				Falls $z \in K_{max}$, so ist $z \subset \bar{x} \subset y$, Also ist $y \notin K_{max}$ und größer als jedes Element von $K_{max}$
+			\end{attention}
+		\end{proof}
+		\begin{lemma}{(Lemma von Zorn)(ZL)}
+			Sei $(X, \leq), X \neq 0$ halbgeordnet. Jede Kette $K \subset X$ besitze eine obere Schranke. Dann existiert zu jedem $\alpha \in X$ ein maximales Element $x_{\alpha} \geq \alpha$ in $X$.
+		\end{lemma}
+		\begin{theorem}{(in ZF)}
+			ZLS $\Rightarrow$ ZL
+		\end{theorem}
+		\begin{proof}
+			Sei $\kappa_{\alpha} = \{ K \subset X | K \ Kette \, \alpha \in K \}$. $\{ \alpha \}$ ist sicherlich eine Kette in $X$. Also ist $\kappa_{\alpha} \neq \emptyset$ und durch $\subset$ halbgeordnet. \\
+			Sei $\mathcal{C} \subset \kappa_{\alpha}$ eine Kette. Nach Lemma 8.7.4 ist dann auch $\bigcup \mathcal{C}$ eine Kette in $X$. Auf $(\kappa_{\alpha}), \subset$ ist also ZLS anwendbar und es folgt die Existenz eines maximalen Elements $K \in \kappa_{\alpha}$. Das heißt $K$ ist eine maximale Kette in $X$ und $\alpha \in K$. Nach Voraussetzung existiert eine obere Schranke $\bar{x} \in X$ von $K$. D.h. $\bar{x} \in X$ und $\forall_{k \in K} k \leq \bar{x}$. Wäre $\bar{x}$ nicht maximal, so gäbe es $y \in X$ mit $y > \bar{y}$. Folglich $y \notin K$. Also wäre $K \cup \{ y \}$ eine echt größere Kette als $K$. Widerspruch.
+		\end{proof}
+		\begin{theorem}{(In ZF)}
+			ZL $\Rightarrow$ HMK
+		\end{theorem}
+		\begin{proof}
+			Sei $(X, \leq)$ halbgeordnet und $\neq \emptyset$. $(\kappa_X, \subset)$ ist bekanntlich ebenfalls $\neq \emptyset$ und halbgeordnet. Ist $K \subset \kappa_X$ eine Kette, so ist nach Lemma (8.7.4) die Vereinigung $\bigcup K \in \kappa_X$ ebenfalls eine Kette. $\bigcup K$ ist sicherlich eine obere Schranke für K. Nach ZL existiert also ein maximales Element in $\kappa_X$
+		\end{proof}
+		\textbf{Zwischenergebnis (in ZF)} \\
+		\begin{center}
+			\begin{tikzcd}
+				& HMK \arrow[dr, Leftrightarrow] \arrow[dl, Leftrightarrow] & & & WO  \arrow[d, Rightarrow]\\
+				ZLS \arrow[rr, Leftrightarrow] & & ZL  \arrow[rr, dash, "?"] \arrow[rru, dash, "?"]& & AC
+			\end{tikzcd}
+		\end{center}
+		\begin{theorem}{(in ZF)}
+			ZL $\Rightarrow$ WO
+		\end{theorem}
+		\begin{proof}
+			Sei $X \neq \emptyset$ eine Menge. Betrachte Paare $(U, \leq), U \subset X$, $\leq$ Wohlordnung auf $U$. \\
+			Bezeichne mit $\xi$ die Menge aller solchen Paare.
+			\begin{itemize}
+				\item 
+					$\xi \neq \emptyset$: Sei $x \in X$. Dann ist $U = \{ x \} \neq \emptyset$ und $U \times U$ eine Wohlordnung auf $U$.
+				\item 
+					Halbordnung auf $\xi$: $(U, \leq_U) \leq_{\xi} (V, \leq_V)$, falls
+					\begin{enumerate}
+						\item 
+							$U \subset V$
+						\item 
+							$\leq_V |_U = \leq_U$
+					\end{enumerate}
+				\item 
+					$(\xi, \leq_{\xi})$ erfüllt Voraussetzung von ZL: Sei $K \subset \xi$ eine Kette, $\hat{U}:= \bigcup K$. Sicherlich gilt $\forall_{U \in K} U \subset \hat{U}$. Für $x,y \in \hat{U}$ wähle man $U_x, U_y \in K$ mit $x \in U_x, y \in U_y$. Da $K$ eine Kette ist, sei ohne Beschränkung der Allgemeinheit $U_x \subset U_y$, also $x, y \in U_y$. Setze $x \leq y :\Leftrightarrow x \leq_{U_y} y$. \\
+					Dies erklärt unabhängig von der Wahl von $U_x, U_y$ eine Wohlordnung (Übung) auf $\hat{U}$. Offenbar ist $(\hat{U}, \leq)$ eine obere Schranke für $K$.
+			\end{itemize}
+			Wir wenden ZL an und erhalten ein maximales Element $(\bar{U}, \leq)$ in $\xi$.
+			\begin{claim*}
+				$\bar{U}=X$, folglich ist $\leq_{\bar{U}}$ eine Wohlordnung auf $X$.
+			\end{claim*}
+			\begin{proof}
+				Wäre $\bar{U} \neq X$, so würde ein $\bar{x} \in X - \bar{U}$ existieren. Dann ist $V := \bar{U} \cup \{ \bar{x} \}$ mit
+				\begin{equation}
+					z \leq_V w :\Leftrightarrow z \leq_{\bar{U}} w, \ z,w \in \bar{U}
+				\end{equation}
+				und $\bar{x} \leq z$ für alle $z \in \bar{U}$ eine Wohlordnung auf $V$. Dies widerspricht der Maximalität von $(\bar{U}, \leq)$
+			\end{proof}
+			Dies beendet den Beweis.
+		\end{proof}
 \end{document}
